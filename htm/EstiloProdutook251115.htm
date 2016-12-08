@@ -1,0 +1,171 @@
+// FastCommerce - EstiloProduto10.htm
+
+<ProdTop>
+<FormProdMult>
+<style>
+.TitTabParc{font-weight:bold;font-size:8pt;font-family:arial}
+.EstParcPar{background:#F5F5F5;font-size:8pt;font-family:verdana}
+.EstParcImpar{background:#FFFFFF;font-size:8pt;font-family:verdana}
+</style>
+<JurosParcelas>
+<script>
+function MostraMaxParcela(PrecoProd,MaxParcelas){
+  var ComSem;
+  if(PrecoProd==0||MaxParcelas==1||Juros.length==0)return;
+  if(MaxParcelas==0||MaxParcelas>Juros.length)MaxParcelas=Juros.length;
+  if(Juros[MaxParcelas-1]>0)ComSem=""; else ComSem="<font color=#DD0000>&nbsp;sem&nbsp;juros</font>";
+  document.write("ou&nbsp;<b>"+MaxParcelas+"x</b>"+ComSem+" de&nbsp;<b>"+FormatPrecoReais(CalculaParcelaJurosCompostos(PrecoProd,MaxParcelas))+"</b>");
+}
+
+function MostraParcelas(PrecoProd,MaxParcelas){
+  var ComSem,EstiloLinha;
+  if(PrecoProd==0||MaxParcelas==1||Juros.length==0)return;
+  if(MaxParcelas==0||MaxParcelas>Juros.length)MaxParcelas=Juros.length;
+  document.write("<br><table width=250 cellpadding=3><tr bgcolor=#DCDCDC><td colspan=3 height=22 class=TitTabParc align=center><b>Opções de parcelamento</td></tr><tr bgcolor=#FFFFFF><td class=TitTabParc>Número&nbsp;de<br>parcelas</td><td align=right class=TitTabParc>Valor&nbsp;de<br>cada&nbsp;parcela</td><td align=right class=TitTabParc>Valor&nbsp;total<br>parcelado</td></tr>");
+  for(var i=0;i<MaxParcelas;i++){
+    if(Juros[i]>0)ComSem="com juros"; else ComSem="<font color=#DD0000>sem&nbsp;juros</font>";
+    if((i%2)==0)EstiloLinha='EstParcPar'; else EstiloLinha='EstParcImpar';
+    document.write("<tr class="+EstiloLinha+"><td class="+EstiloLinha+">"+(i+1)+"x "+ComSem+"</td><td class="+EstiloLinha+" align=right>"+FormatPrecoReais(CalculaParcelaJurosCompostos(PrecoProd,i+1))+"</td><td class="+EstiloLinha+" align=right>"+FormatPrecoReais(CalculaParcelaJurosCompostos(PrecoProd,i+1)*(i+1))+"</td></tr>");
+  }
+  document.write("</table><br>");
+}
+</script>
+<script>
+function IndicaProd(IDProduto){
+document.write("<center><span class=smText><a href='javascript:MostraIndique(21319,"+IDProduto+")'><img src=/lojas/00021319/images/BotIndique.gif border=0 vspace=2></a></span></center>");
+}
+</script>
+
+</ProdTop>
+
+<ProdLista>
+
+<br />
+<br />
+<script language="JavaScript">
+var sPag=document.location.href.toUpperCase();
+if(sPag.indexOf("196058")>=0 || sPag.indexOf("205135")>=0 || sPag.indexOf("205127")>=0 || sPag.indexOf("205128")>=0 || sPag.indexOf("205129")>=0 || sPag.indexOf("205139")>=0 || sPag.indexOf("205130")>=0 || sPag.indexOf("205133")>=0 || sPag.indexOf("205132")>=0 || sPag.indexOf("205138")>=0 || sPag.indexOf("205134")>=0 || sPag.indexOf("205140")>=0 || sPag.indexOf("205137")>=0 || sPag.indexOf("205136")>=0)
+{
+document.write("<style>#ContVisible{display:block;}</style>");
+}
+else
+{
+document.write("<style>#ContVisible{display:none;}</style>");
+}
+</script>
+	<div class="estProd1">
+		<a href="ListaProdutos.asp?IDLoja=<IDLoja>&IDProduto=<IDProduto>"><div class="quadroimg"><ImagemProd></div></a>
+		<div class="nome" style="width:220px;">
+			<a href="ListaProdutos.asp?IDLoja=<IDLoja>&IDProduto=<IDProduto>"><NomeProd></a>
+		</div>
+		<div class="preco" style="width:220px;">
+			<a href="ListaProdutos.asp?IDLoja=<IDLoja>&IDProduto=<IDProduto>"><PrecoSimples></a><br />
+<div id="ContVisible" align="center"><IncMult> <LinkComprar></div>
+		</div><br />
+<br />
+	</div>
+
+
+
+</ProdLista>
+
+<ProdDet> 
+
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+                  <td><img src=images/shim.gif width=8 height=1></td>
+                  <td valign=top width=<ProdLargura>><br><div style="border:1px #CCC solid; padding:6 0 6 6; width:100%; height:100%;"><ImagemProd></div><br /><div align="center">
+                      <table>
+                          <tr>
+                            <td width="180px"><script>IndicaProd(<IDProduto>);</script></td>
+                            <td><ShareFacebook></td>
+                            <td><Facebook type="like" send="true" layout="button_count" width="150" show_faces="false"></td>
+                          </tr>
+                      </table>
+					</td>
+					<td valign="top">
+                      <table border="0" width="85%" style="margin-left:30px; margin-top:20px" cellpadding=0 cellspacing=0>
+                           <tr>
+							<td>
+                            
+                            	<table width=100% cellpadding=2 cellspacing=0 align=right>
+                                	<tr>
+                                      <td><span class=EstNomeProd><NomeProd></span><br />
+        <span class=EstRefProd><LegendaCat> <NomeCat><br>Ref. <CodProd></span></td>
+                                  	</tr>
+                        			<tr>
+                                        <td ><hr noshade="noshade" size="1" color="#CCC" style="color:#CCC"></td>
+                                  	</tr>
+                                  
+									<tr><td class="EstDescrProd"><Descricao><DescrHTM></td></tr> 
+                          			<tr><td><br /><hr noshade="noshade" size="1" color="#CCC" style="color:#CCC"><br /></td></tr>                           
+                                  
+									<tr>
+                                    <td class=EstPrecoProd><Preco><script>MostraEconomia(<PrecoNum>,<PrecoOri>);</script>&nbsp;<script>MostraMaxParcela(<PrecoNum>,<MaxParcelasProdNum>);</script></td></tr>
+                                   	<tr> <td valign="top"><Adicional1><Adicional2><Adicional3><AdicionalD1><AdicionalD2><AdicionalD3></td>
+                                  	<tr> 
+                                    	<td valign="top">Informe os produtos para adicionar à cesta <IncMult><br><LinkComprar></td></tr>
+								<Sub>          
+                          			<tr>
+										<td valign=top height="90px" colspan="2">
+                            
+                            	<table width=100% name=TabSubs cellpadding=0 cellspacing=0 align=right>
+									<tr>
+                                      <td>
+                                        <table name=TabDadosSubProduto<IDProduto> cellpadding=0 cellspacing=10 width=100% class=<EstiloSubProduto>>
+                                          <tr>
+                                            <td valign=top>
+                                              <table name=TabRefSubProd<IDProduto> width=100% cellpadding=6 cellspacing=0>
+                                                <tr><td valign=top class=EstNomeSubProd><Descricao></td></tr>
+                                                <tr>
+                                                  <td class=EstPrecoProd><Preco><script>MostraEconomia(<PrecoNum>,<PrecoOri>);</script>&nbsp;<script>MostraMaxParcela(<PrecoNum>,<MaxParcelasProdNum>);</script><br /> </td></tr>
+                                                 <tr> <td><Adicional1><Adicional2><Adicional3><AdicionalD1><AdicionalD2><AdicionalD3></td></tr>		
+                                                 <tr> 
+                                                 	<td valign="top">Indique a quantidade <IncMult><br><LinkComprar><br /></td>	
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                  </tr>
+								</table>
+                                          		
+							</td>
+						 </tr>
+</Sub>                          
+                         
+<br />
+
+
+
+                        <tr>
+                        	<td>
+                            	<table style="background-color:#F2F2F2; padding: 14 26 14 26" cellspacing="0" cellpadding="0" border="0"> 
+                                      <tr>
+                                        <td align=center><strong style="color:#585858"> 
+
+<br><big>
+<font color=#FF0000>
+...<br>
+<big/></font>
+<br /></td>
+
+
+
+
+
+
+                                      </tr>     
+                                  </table>
+                            </td></tr>
+						<tr><td><br><Comments></td></tr>
+					</table>
+                  </td>
+                </tr>
+                
+			</table>
+		
+</ProdDet>
+
+<ProdBottom></FormProdMult></ProdBottom>
