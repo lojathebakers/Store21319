@@ -1,0 +1,263 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  
+  <script>
+var IDLojaAS='<IDLoja>'
+var CaminhoProdAS='<BaseLoja>prod/' 
+var g1='5'; //Quantidade de itens do grupo g1(Termos), Padrão 5, Máximo 9, 0 Não exibe
+var g2='3'; //Quantidade de itens do grupo g2(Páginas), Padrão 3, Máximo 9, 0 Não exibe
+var g3='5'; //Quantidade de itens do grupo g3(Produtos), Padrão 5, Máximo 9, 0 Não exibe
+var g4='0'; //Quantidade de itens do grupo g4(Notícias), Padrão 3, Máximo 9, 0 Não exibe
+  </script>
+  
+  <link rel="stylesheet" href="%3CBaseLoja%3Ehtm/jquery_ui.css">
+
+  
+  <script language="JavaScript" src="/jquery-1.8.2.min.js"></script>
+  
+  <script language="JavaScript" src="/jquery-ui-1.9.2.custom.min.js"></script>
+  
+  <script type="text/javascript" src="%3CBaseLoja%3Ehtm/autosuggest.js"></script><!--[if IE]>
+
+<style type="text/css">.ui-autocomplete-category{margin-top: -2px}</style>
+
+<![endif]-->
+  
+  <script type="text/javascript" src="%3CBaseLoja%3Ehtm/jquery.js"></script>
+  
+  <script type="text/javascript" src="%3CBaseLoja%3Ehtm/principal.js"></script><!-- scritp Googlefont -->
+  
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Open+Sans:sans-serif' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script><!-- scritp Googlefont --><!-- scritp Facebook -->
+  
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  
+  <script>
+navHover = function() {
+	var lis = document.getElementById("idMenuCat1").getElementsByTagName("LI");
+	for (var i=0; i<lis.length; i++) {
+		lis[i].onmouseover=function() {
+			this.className+=" iehover";
+		}
+		lis[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" iehover\\b"), "");
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", navHover);
+  </script>
+  
+  <style>
+#idMenuCat1 .wid{width:0px}
+
+/* Root = Horizontal, Secondary = Vertical */
+ul#idMenuCat1 {
+  margin: 0;
+  margin-left: 95px;
+  margin-top:0px;
+  border: 0 none;
+  padding: 0;
+  padding-bottom: 0px;
+  width: 100%; /*For KHTML*/
+  list-style: none;
+  height: 24px;
+}
+
+ul#idMenuCat1 li {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  padding-right:0px;
+  float: left; /*For Gecko*/
+  display: inline;
+  list-style: none;
+  position: relative;
+}
+
+ul#idMenuCat1 ul {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  width: 265px;
+  list-style: none;
+  display: none;
+  position: absolute;
+  left: 0;
+}
+
+ul#idMenuCat1 ul:after /*From IE 7 lack of compliance*/{
+  clear: both;
+  display: block;
+  font: 1px/0px serif;
+  content: ".";
+  height: 0;
+  visibility: hidden;
+}
+
+ul#idMenuCat1 ul li {
+  width: 225px;
+  margin-left: 0px;
+  margin-top:0;
+  float: left; /*For IE 7 lack of compliance*/
+  display: block !important;
+  display: inline; /*For IE*/
+  background: #fff;
+  padding: 0;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Root Menu */
+ul#idMenuCat1 a {
+  padding: 0 32px;
+  float: none !important; /*For Opera*/
+  float: left; /*For IE*/
+  display: block;
+  color: #666;
+  font: normal 16px/22px Helvetica, Arial, Verdana, sans-serif;
+  text-decoration: none;
+  height: auto !important;
+  height: 1%; /*For IE*/
+}
+
+/* Root Menu Hover Persistence */
+ul#idMenuCat1 a:hover,
+ul#idMenuCat1 li:hover a,
+ul#idMenuCat1 li.iehover a {
+  background: #fff;
+  color: #000;
+}
+
+/* 2nd Menu */
+ul#idMenuCat1 li:hover li a,
+ul#idMenuCat1 li.iehover li a {
+  float: none;
+  background: #fff;
+  left: 0px;
+  top: 0px;
+  color: #666;
+  font: normal 14px/22px Helvetica, Arial, Verdana, sans-serif;
+}
+
+/* 2nd Menu Hover Persistence */
+ul#idMenuCat1 li:hover li a:hover,
+ul#idMenuCat1 li:hover li:hover a,
+ul#idMenuCat1 li.iehover li a:hover,
+ul#idMenuCat1 li.iehover li.iehover a {
+  border: none;
+  background: #ccc;
+  color: #000;
+}
+
+/* 3rd Menu */
+ul#idMenuCat1 li:hover li:hover li a,
+ul#idMenuCat1 li.iehover li.iehover li a {
+  background: #EEE;
+  color: #666;
+}
+
+/* 3rd Menu Hover Persistence */
+ul#idMenuCat1 li:hover li:hover li a:hover,
+ul#idMenuCat1 li:hover li:hover li:hover a,
+ul#idMenuCat1 li.iehover li.iehover li a:hover,
+ul#idMenuCat1 li.iehover li.iehover li.iehover a {
+  background: #CCC;
+  color: #FFF;
+}
+
+/* 4th Menu */
+ul#idMenuCat1 li:hover li:hover li:hover li a,
+ul#idMenuCat1 li.iehover li.iehover li.iehover li a {
+  background: #EEE;
+  color: #666;
+}
+
+/* 4th Menu Hover */
+ul#idMenuCat1 li:hover li:hover li:hover li a:hover,
+ul#idMenuCat1 li:hover li:hover li:hover li:hover a,
+ul#idMenuCat1 li.iehover li.iehover li.iehover li a:hover,
+ul#idMenuCat1 li.iehover li.iehover li.iehover li.iehover a {
+  background: #CCC;
+  color: #FFF;
+}
+
+
+/* 5th Menu */
+ul#idMenuCat1  li:hover li:hover li:hover li:hover li a,
+ul#idMenuCat1 li.iehover li.iehover li.iehover li.iehover li a {
+  background: #EEE;
+  color: #666;
+}
+
+/* 5th Menu Hover */
+ul#idMenuCat1-v li:hover li:hover li:hover li:hover li a:hover,
+ul#idMenuCat1-v li.iehover li.iehover li.iehover li.iehover li a:hover {
+  background: #CCC;
+  color: #FFF;
+}
+
+ul#idMenuCat1 ul ul,
+ul#idMenuCat1 ul ul ul,
+ul#idMenuCat1 ul ul ul ul,
+ul#idMenuCat1 ul ul ul ul ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 160px;
+}
+
+/* Do Not Move - Must Come Before display:block for Gecko */
+ul#idMenuCat1 li:hover ul ul,
+ul#idMenuCat1 li:hover ul ul ul,
+ul#idMenuCat1 li:hover ul ul ul ul,
+ul#idMenuCat1 li:hover ul ul ul ul ul,
+ul#idMenuCat1 li.iehover ul ul,
+ul#idMenuCat1 li.iehover ul ul ul,
+ul#idMenuCat1 li.iehover ul ul ul ul,
+ul#idMenuCat1 li.iehover ul ul ul ul ul {
+  display: none;
+}
+
+ul#idMenuCat1 li:hover ul,
+ul#idMenuCat1 ul li:hover ul,
+ul#idMenuCat1 ul ul li:hover ul,
+ul#idMenuCat1 ul ul ul li:hover ul,
+ul#idMenuCat1 ul ul ul ul li:hover ul,
+ul#idMenuCat1 li.iehover ul,
+ul#idMenuCat1 ul li.iehover ul,
+ul#idMenuCat1 ul ul li.iehover ul,
+ul#idMenuCat1 ul ul ul li.iehover ul,
+ul#idMenuCat1 ul ul ul ul li.iehover ul {
+  display: block;
+}
+  </style>
+</head>
+
+<body>
+
+<!-- scritp Facebook -->
+
+<script type="text/javascript" src="https://form.jotformz.com/jsform/40457789420663"></script>
+</script>
+
+
+
+</body></html>
