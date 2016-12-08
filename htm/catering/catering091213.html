@@ -1,0 +1,784 @@
+<style type="text/css">
+<!--
+h1 {
+	font-family: verdana;
+	font-size: 14px;
+	color: #741012;
+	font-weight:bold;
+}
+h3 {
+	font-family: verdana;
+	font-size: 10px;
+	color: #1a1a1a;
+	font-style: normal;
+}
+#fundo {
+	float: left;
+	margin-top: 25px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 22px;
+	padding: 0px;
+}
+
+.style3 {color: #1c1c1c}
+
+.style6 {
+	color: #FFFFFF;
+	font-size: 10px;
+	font-family: Verdana;
+	text-decoration: none;
+}
+
+-->
+</style>
+<script type="text/javascript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+
+<div id="fundo">
+  <div>
+  <table width="98%" align="center">
+  	<tr>
+    	<td>
+<p style="font-size:22px; line-height:30px; font-weight:bold;">PRESENTES CORPORATIVOS<br>
+OU EVENTOS NA SUA EMPRESA <br>
+<br>
+RÁPIDO<br>
+PRÁTICO<br>
+FÁCIL!!!</p>
+<p style="font-size:14px; line-height:22px; font-weight:normal;">Atenção Empresas: Preparamos presentes de fim de ano ou fornecemos para festa de fim de ano, evento, reunião, etc... Entregamos em seu trabalho ou residência.<br>
+<br>
+Faça um orçamento personalizado. Use o formulário ao lado para informar os itens que deseja cotar.<br>
+Responderemos imediatamente !
+</p>
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        
+        <td>
+        
+        <table align=center width=400 cellspacing=1 cellpadding=5 class=EstTabPedido>
+      <form name=form method=POST action=EnviaMail.asp>
+        <input type=hidden name=NomePara value='Comercial The Bakers'>
+        <input type=hidden name=EmailPara value='lojavirtual@thebakers.com.br'>
+        <input type=hidden name=Assunto value='Pedido de Orçamento'>
+        <input type=hidden name=URLRetorno value='<HTMLoja>Obrigado.htm'>
+        <input type=hidden name=OrdemCampos value='NomeDe,EmailDe,Sexo,Cargo,Interesses,Comentarios'>
+  <tr>
+    <td align=center colspan=2 class=EstTabPedidoTit>Formulário para Solicitação de Orçamentos</td>
+  </tr>   
+  <tr>
+    <td width=120 align=right class=EstNomeCampo>Nome:</td>
+    <td><input type=text name=NomeDe class=InputText size=25 maxlength=50></td>
+  </tr>   
+  <tr>
+    <td align=right class=EstNomeCampo>E-mail:</td>
+    <td><input type=text name=EmailDe class=InputText size=25 maxlength=50></td>
+  </tr>   
+  <tr>
+    <td align=right valign=top class=EstNomeCampo>Descreva aqui o que necessita,  bem como a verba disponível, <br><br> Responderemos imediatamente !</td>
+    <td><textarea wrap=virtual cols=18 rows=10 name="Comentarios" class=InputText style=height:140px;width:250px></textarea></td>
+  </tr>   
+  <tr>
+    <td colspan=2 align=center><input type=button name=Enviar value=' Enviar ' class=InputButton onclick='javascript:ValidaForm()'></td>
+  </tr></form>
+</table>
+
+<script>
+function ValidaForm(){
+
+ //Contato Nome
+ if(isEmpty(document.form.NomeDe.value)){
+    AvisoErroCampo(document.form.NomeDe,'Informe seu nome.');
+    return false;
+ }
+
+ //E-mail
+ if(isEmpty(document.form.EmailDe.value) || !ValidaEmailInt(document.form.EmailDe.value)){
+    AvisoErroCampo(document.form.EmailDe,'Informe seu e-mail.');
+    return false;
+ }
+
+
+ //Comentários
+ if(isEmpty(document.form.Comentarios.value)){
+    AvisoErroCampo(document.form.Comentarios,'Comentário não pode ser branco.');
+    return false;
+ }
+
+ document.form.submit();
+}
+
+function ValidaEmailInt(sEmail) {
+  var regex=/^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+\.)+[a-zA-Z0-9.-]{2,4}$/;
+  return regex.test(sEmail);
+}
+
+function retiraEspaco(theString) {
+//retira espaços de string
+  if(theString.indexOf(" ")>=0){
+    var i=0;
+    while(theString.indexOf(" ")>=0){
+      if(theString.charAt(i)==" ")theString=theString.substring(0,i)+theString.substring(i+1,theString.length);
+      else i++;
+    }
+    newString=theString;
+  } 
+  else newString=theString;
+  return newString;
+}
+
+function isEmpty(s){return((retiraEspaco(s)==null)||(retiraEspaco(s).length==0));}
+
+function AvisoErroCampo(theField,warnText){
+  theField.focus();
+  theField.select();
+  alert(warnText);
+  return false;
+}
+
+function AvisoErroCampo_SelectBox(theField,s){
+  theField.focus();
+  alert(s);
+  return false;
+}
+</script>
+  
+        
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;<br>
+&nbsp;<br>
+&nbsp;</td>
+      </tr>
+  </table>
+
+  
+  
+  </div>
+<!--  <div>
+    <p align="center">
+    <a href="#cestas"><img src="<BaseLoja>images/catering/cestapaesmini.jpg" width="110" height="80" /></a>
+    <a href="#queijosefrios"><img src="<BaseLoja>images/catering/ca_tabmistfrio.jpg" width="110" height="80" /></a>
+    <a href="#minisanduiches"><img src="<BaseLoja>images/catering/cestapaesmini.jpg" width="110" height="80" /></a>
+    <a href="#tabuas"><img src="<BaseLoja>images/catering/ca_tabmistfrio.jpg" width="110" height="80" /></a>
+    <a href="#salgados"><img src="<BaseLoja>images/catering/cestapaesmini.jpg" width="110" height="80" /></a>
+    <a href="#doces"><img src="<BaseLoja>images/catering/ca_tabmistfrio.jpg" width="110" height="80" /></a>
+    <a href="#frutas"><img src="<BaseLoja>images/catering/cestapaesmini.jpg" width="110" height="80" /></a>
+    <a href="#complementos"><img src="<BaseLoja>images/catering/cestapaesmini.jpg" width="110" height="80" /></a>
+   
+    </p>
+  </div> -->
+
+  <div>
+    <table width="100%" border="0" cellpadding="2" cellspacing="10" >
+      <tr>
+        <td><h1>PRODUTO</h1></td>
+        <td width="248"></td>
+        <td width="166"><h1>POR&Ccedil;&Atilde;O</h1></td>
+        <td width="180"><h1>INDICADO PARA</h1></td>
+        <td width="74"><h1>PRE&Ccedil;O</h1></td>
+      </tr><tr><td colspan="5" height="1"><hr size="1"></td></tr>
+      <a name="cestas"></a>
+      <tr>
+        <td valign="top"><a href="javascript:;" onclick="MM_openBrWindow('<BaseLoja>images/catering/ca_cestadepaesw.jpg','','width=400,height=600')"><img src="<BaseLoja>images/catering/cestapaesmini.jpg" /></a>
+        </td>
+        <td valign="top">CESTA DE P&Atilde;ES <span class="style3"><br />
+        uma sele&ccedil;&atilde;o entre: 8 gr&atilde;os, Australiano, Farm Bread - milho, Ciabatta Branco, Ciabatta Preto, Provolone Integral, Brioche, Mini Chal&aacute;</span></td>
+        <td valign="top"> PEQUENA<br /> 
+            <span class="style3">ideal para 10 pessoas<br />
+            <br />
+            </span> M&Eacute;DIA <br />
+        <span class="style3">ideal para 20 pessoas</span></td>
+        <td valign="top">Caf&eacute; da Manh&atilde;<br />
+          Coffee Break<br />
+          Brunch<br />
+          Almo&ccedil;o Informal<br />
+          Ch&aacute; da Tarde<br />
+        Happy Hour</td>
+        <td valign="top"> PEQUENA<br /> 
+          <span valign="top" class="style3"> R$ 70,00</span>  <br />
+          <br />
+        M&Eacute;DIA <br />
+        <span valign="top" class="style3"> R$ 90,00</span></td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top">CESTA DE FOCCACIA </td>
+        <td valign="top"> PEQUENA <br />
+            <span class="style3">ideal para 10 pessoas </span><br />
+        <br />
+        M&Eacute;DIA<br /> 
+        <span class="style3">ideal para 20 pessoas</span></td>
+        <td valign="top">Coffee Break Brunch Almo&ccedil;o Informal Ch&aacute; da Tarde Happy Hour</td>
+        <td valign="top"> PEQUENA <br />
+            <span valign="top" class="style3"> R$ 79,00</span><br />
+        <br />  
+        M&Eacute;DIA <br />
+        <span valign="top" class="style3"> R$ 139,00 </span></td>
+      </tr><tr><td colspan="5" height="1"><hr size="1"></td></tr>
+      
+      
+      <a name="queijosefrios"></a>
+      <tr>
+        <td valign="top"><a href="javascript:;" onclick="MM_openBrWindow('<BaseLoja>images/catering/ca_tabmistfrio650.gif','','width=650,height=447')"><img src="<BaseLoja>images/catering/ca_tabmistfrio.jpg" alt="" width="200" height="129" />
+        </a></td>
+        <td valign="top">QUEIJOS &amp; FRIOS MATINAIS <br />
+            <span class="style3">uma sele&ccedil;&atilde;o entre: Queijo minas, Queijo Prato, Blanquet  de Peru, Peito de Peru Defumado e Presunto</span></td>
+        <td valign="top">PEQUENA <span class="style3"><br />
+          t&aacute;bua de 30cm ideal para 9 pessoas aprox. 1,5kg</span> <br />
+          <br />
+        M&Eacute;DIA <br />
+        <span class="style3">t&aacute;bua de 39cm ideal para 13 pessoas aprox. 2,3kg </span><br />
+        <br />
+        GRANDE<br /> 
+        <span class="style3">t&aacute;bua de 44cm ideal para 16 pessoas aprox. 3,2kg</span> </td>
+        <td valign="top">Caf&eacute; da Manh&atilde;</td>
+        <td valign="top"> PEQUENA<br />
+          <span valign="top" class="style3"> R$ 100,00</span><br />
+          <br /> 
+        M&Eacute;DIA<br />        
+        <span valign="top" class="style3"> R$ 140,00 </span><br />
+        <br />
+        GRANDE<br />        
+        <span valign="top" class="style3"> R$ 180,00</span>         </td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top">QUEIJOS PREMIUM<br>
+<span class="style3">uma sele&ccedil;&atilde;o entre: Ementhal, Brie, Gruy&eacute;re Camembert, Queijo de cabra, Queijo bola, Provolone </span></td>
+        <td valign="top">PEQUENA<br /> 
+            <span class="style3">t&aacute;bua de 30cm ideal para 9 pessoas aprox. 1,5kg</span><br />
+          <br /> 
+        M&Eacute;DIA<br /> 
+        <span class="style3">t&aacute;bua de 39cm ideal para 13 pessoas aprox. 2,3kg </span><br />
+        <br />
+        GRANDE <br />
+        <span class="style3">t&aacute;bua de 44cm ideal para 16 pessoas aprox. 3,2kg</span></td>
+        <td valign="top"> Coffee Break Brunch <br />
+        Almo&ccedil;o Informal<br /> 
+        Ch&aacute; da Tarde Happy Hour</td>
+        <td valign="top"> PEQUENA<br /> 
+          <span valign="top" class="style3"> R$ 185,00</span> <br />
+            <br />
+            M&Eacute;DIA<br />
+            <span valign="top" class="style3"> R$           220,00 </span><br />
+            <br />
+            GRANDE<br />
+            <span valign="top" class="style3"> R$ 270,00</span>         </td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top">FRIOS PREMIUM <span class="style3"><br />
+        uma sele&ccedil;&atilde;o entre: Presunto Parma, Blanquete de Peru, Presunto Tender Defumado, Lombinho, Salame Hamburgues, Peito de Peru Defumado, Pastrami</span></td>
+        <td valign="top"> PEQUENA <br />
+            <span class="style3">t&aacute;bua de 30cm ideal para 9 pessoas aprox. 1,5kg </span><br />
+        <br />
+        M&Eacute;DIA <br />
+        <span class="style3">t&aacute;bua de 39cm ideal para 13 pessoas aprox. 2,3kg </span><br />
+        <br />
+        GRANDE<br /> 
+        <span class="style3">t&aacute;bua de 44cm ideal para 16 pessoas aprox. 3,2kg </span></td>
+        <td valign="top">Coffee Break Brunch Almo&ccedil;o Informal Ch&aacute; da Tarde Happy Hour</td>
+        <td valign="top"> PEQUENA<br /> 
+          <span valign="top" class="style3"> R$ 170,00 </span><br />
+        
+                    M&Eacute;DIA 
+            <br />
+            <span valign="top" class="style3"> R$ 215,00 </span><br />
+        <br />
+        GRANDE 
+        <br />
+        <span valign="top" class="style3"> R$ 260,00 </span></td>
+      </tr><tr><td colspan="5" height="1"><hr size="1"></td></tr>
+      <a name="minisanduiches"></a>
+      <tr>
+        <td valign="top">
+          <a href="javascript:;" onclick="MM_openBrWindow('<BaseLoja>images/catering/ca_cestadepaesw.jpg','','width=400,height=600')"><img src="/<BaseLoja>images/catering/ca_minisand_bagpq.gif" width="200" height="142" /></a></td>
+        <td valign="top">MINI SANDU&Iacute;CHES <br />
+        Por t&aacute;bua<br />
+        Escolha 1 tipo de p&atilde;o: <br />
+        <span class="style3">Baguetes de Leite Branca e Preta Ciabattas Branca e Preta</span> <br />
+        <br />
+        <br /> 
+        e 3 recheios listados ao abaixo: <br />
+        <span class="style3">
+        Cream Cheese light com Peito de Peru <br />
+        Pasta de Ovos com Blanquet de Peru <br />
+        Queijo Minas com Gel&eacute;ia de Damasco <br />
+        Requeij&atilde;o Light com Pedacinhos de Queijo Prato e Blanquet <br />
+        Ricota com Cenoura e Pedacinhos de Nozes <br />
+        Ricota com Gel&eacute;ia de Amora <br />
+        Ricota com Tomate Seco <br />
+        Cream Cheese com Tomate Seco e R&uacute;cula <br />
+        Queijo Bola com Chutney de Amora<br />
+        Blanquete de Peru com Gel&eacute;ia Caseira de Damasco <br />
+        Salm&atilde;o com Cream Cheese<br />
+        Mussarela de B&uacute;fala e Tomate Seco<br />
+        Carpaccio com Molho Pesto e R&uacute;cula<br />
+        Presunto de Parma com Mussarela de B&uacute;fala <br />
+        Salame, Queijo Provolone e R&uacute;cula<br />
+        Lombinho Canadense com Chutney de Amora<br /> 
+        Caesar Salad com Finos Strips de Frango <br />
+        Lombinho Canadense com Provolone e Ma&ccedil;&atilde; Americana <br />
+        Peito de Frango com Queijo Ementhal e Honey Mustard <br />
+        Pat&ecirc; com Chutney de Amora<br />
+        Blanquet de Peru, Maionese de Ervas Provolone e Nozes <br />
+        Presunto de Parma com Tomate Seco <br />
+        Peito de Peru Ricota com Espinafre e Iogurte Light</span></td>
+        <td valign="top">PEQUENA 
+            <br />
+            <span class="style3">t&aacute;bua de 30cm<br /> 
+            ideal para 9 pessoas <br />
+        30 unidades </span><br />
+        <br />
+        M&Eacute;DIA <br />
+        <span class="style3">t&aacute;bua de 39cm ideal para 13 pessoas<br />
+        60 unidades </span><br />
+            <br />
+        GRANDE <br />
+        <span class="style3">t&aacute;bua de 44cm<br /> 
+        ideal para 
+        16 pessoas <br />
+        80 unidades</span>        </td>
+        <td valign="top">Caf&eacute; da Manh&atilde; Coffee Break Brunch Almo&ccedil;o Informal Ch&aacute; da Tarde Happy Hour</td>
+        <td valign="top"> PEQUENA<br />
+          <span valign="top" class="style3"> R$ 120,00 </span><br />
+          <br />
+          M&Eacute;DIA<br />          
+          <span valign="top" class="style3"> R$ 170,00</span> <br />
+          <br />
+        GRANDE<br />        
+        <span valign="top" class="style3"> R$ 195,00</span></td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top"><a href="javascript:;" onclick="MM_openBrWindow('<BaseLoja>images/catering/blinis.gif','','width=400,height=600')"><img src="<BaseLoja>images/catering/blinis.gif" alt="" width="200" height="129" /></a></td>
+        <td valign="top"><p>MINI SANDU&Iacute;CHES BLINIS</p>
+          <p><br />
+            <span class="style3">Salm&atilde;o com Cream               Cheese</span></p>
+         <p><span class="style3">Cream Cheese com               Tomate Seco</span></p>
+         <p><span class="style3"> <br />
+        Carpaccio com Molho</span></p></td>
+        <td valign="top">PEQUENA <br />
+            <span class="style3">t&aacute;bua de 30cm ideal para 9 pessoas 60 unidades </span><br />
+        <br />
+        M&Eacute;DIA<br />
+        <span class="style3">t&aacute;bua de 39cm ideal para 13 pessoas 100 unidades <br />
+        </span><br />
+        GRANDE <br />
+        <span class="style3">t&aacute;bua de 44cm ideal para 16 pessoas 130 unidades </span></td>
+        <td valign="top">Caf&eacute; da Manh&atilde;<br />
+          Coffee Break<br />
+          Brunch<br />
+          Almo&ccedil;o Informal<br />
+        Happy Hour</td>
+        <td valign="top">PEQUENA<br />
+            <span valign="top" class="style3"> R$ 140,00</span><br />
+  <br />
+          M&Eacute;DIA<br />
+          <span valign="top" class="style3"> R$ 170,00</span><br />
+  <br />
+          GRANDE<br />
+          <span valign="top" class="style3"> R$ 190,00</span></td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top"> MINI SANDU&Iacute;CHES BLINIS <br />
+            <span class="style3">Caviar com Sour Cream </span></td>
+        <td valign="top">M&Eacute;DIA <br />
+            <span class="style3">t&aacute;bua de 39cm <br />
+            ideal para 13 pessoas <br />
+        100 unidades</span></td>
+        <td valign="top">Caf&eacute; da Manh&atilde; Coffee Break Brunch <br />
+        Almo&ccedil;o Informal Ch&aacute; da Tarde Happy Hour</td>
+        <td valign="top"> M&Eacute;DIA <br />
+            <span valign="top" class="style3"> R$ 470,00</span></td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr><td colspan="5" height="1"><hr size="1"></td></tr>
+      
+      <a name="tabuas"></a>
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top"> T&Aacute;BUA DE ARENQUE MARINADO COM MINI CHAL&Aacute; </td>
+        <td valign="top"> TAMANHO &Uacute;NICO<br /> 
+            <span class="style3">t&aacute;bua de 39cm <br />
+        ideal para 10 pessoas</span> </td>
+        <td valign="top"> Coffee Break Brunch Almo&ccedil;o Informal Ch&aacute; da Tarde Happy Hour</td>
+        <td valign="top" class="style3"> R$ 149,00 </td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top"><br />
+          BRIE COM DAMASCO<br />
+        </td>
+        <td valign="top"> TAMANHO &Uacute;NICO <br />
+            <span class="style3">t&aacute;bua de 39cm <br />
+        ideal para 10 pessoas </span></td>
+        <td valign="top"> Caf&eacute; da Manh&atilde; Coffee Break Brunch Almo&ccedil;o Informal Ch&aacute; da Tarde Happy Hour</td>
+        <td valign="top" class="style3"> R$ 129,00 </td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top"><a href="javascript:;" onclick="MM_openBrWindow('<BaseLoja>images/catering/salmao600.gif','','width=400,height=600')"><img src="<BaseLoja>images/catering/salmaomini.gif" alt="" width="200" height="129" /></a></td>
+        <td valign="top">T&Aacute;BUA DE SALM&Atilde;O DEFUMADO</td>
+        <td valign="top"> TAMANHO &Uacute;NICO <br />
+            <span class="style3">t&aacute;bua de 39cm<br /> 
+        ideal para 10 pessoas</span></td>
+        <td valign="top">Caf&eacute; da Manh&atilde; Coffee Break Brunch Almo&ccedil;o Informal Ch&aacute; da Tarde Happy Hour </td>
+        <td valign="top" class="style3"> R$ 230,00 </td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top"> T&Aacute;BUA DE CARPACCIO </td>
+        <td valign="top"> PEQUENA <br />
+            <span class="style3">t&aacute;bua de 30cm <br />
+        ideal para 9 pessoas aprox. 1,2kg </span><br />
+        <br />
+        M&Eacute;DIA <br />
+        <span class="style3">t&aacute;bua de 39cm <br />
+        ideal para 13 pessoas </span><br />
+        <br />
+        GRANDE <br />
+        <span class="style3">t&aacute;bua de 44cm <br />
+        ideal para 16 pessoas</span></td>
+        <td valign="top"> Coffee Break Brunch Almo&ccedil;o Informal Ch&aacute; da Tarde Happy Hour</td>
+        <td valign="top"> PEQUENA <br />
+            <span valign="top" class="style3"> R$ 140,00 <br />
+            <br />
+            </span>M&Eacute;DIA <br />
+            <span valign="top" class="style3"> R$ 170,00</span><br />
+            <br /> 
+        GRANDE <br />
+        <span valign="top" class="style3"> R$ 210,00 </span></td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr><td colspan="5" height="1"><hr size="1"></td></tr>
+      
+      <a name="salgados"></a>
+      <tr>
+        <td valign="top"><a href="javascript:;" onclick="MM_openBrWindow('<BaseLoja>images/catering/miniquiche.jpg','','width=400,height=600')"><img src="<BaseLoja>images/catering/miniquiche.jpg" alt="" width="200" height="129" /></a></td>
+        <td valign="top">MINI SALGADOS <br />
+            <br />
+        Ao Forno <br />
+        <span class="style3">Frango com Catupiry <br />
+        Burreka de Queijo<br /> 
+        Palmito com Catupiry <br />
+        Berinjela<br /> 
+        Tomate Seco com Parmes&atilde;o <br />
+        </span><br />
+        Folhados <br />
+        <span class="style3">Lombinho Canadense<br /> 
+        com Abacaxi <br />
+        Frango com Catupiry <br />
+        Palmito com Catupiry Alho Por&oacute; com Champignon <br />
+        Salm&atilde;o com Cream Cheese <br />
+        Bacalhau <br />
+        <br />
+        </span>Quiches <span class="style3"><br />
+        Bacalhau com Creme de Queijo <br />
+        Espinafre <br />
+        Lorraine (queijo com presunto) <br />
+        Tr&ecirc;s Tomates <br />
+        Pizzarina (tomate, queijo e or&eacute;gano) <br />
+        Ricota com Tomate Seco<br />
+        Provol'onion (provolone com cebola) Peito de Peru com Alho Por&oacute; <br />
+        Salm&atilde;o com Cream Cheese <br />
+        Berinjela com Tomate Seco <br />
+        Legumes com Herbs de Provence Frango ao Curry <br />
+        <br />
+        </span>Mini Croissant <span class="style3"><br />
+        Tradicional Queijo com Presunto Pizzarina (tomate, queijo e or&eacute;gano)<br />
+        </span>
+                    Dupla de P&atilde;o de queijo</td>
+        <td valign="top"> individual <br />
+          <br />
+          m&iacute;nimo - 25 
+        unidades 
+        25 unidades<br /> 
+          <span class="style3">1 sabor</span><br />
+          <br /> 
+          50 unidades <br />
+          <span class="style3">at&eacute; 2 sabores </span><br />
+          <br />
+          75 unidades <br />
+          <span class="style3">at&eacute; 3 sabores </span><br />
+          <br />
+          100 unidades <br />
+          <span class="style3">at&eacute; 4 unidades</span>        </td>
+        <td valign="top">Caf&eacute; da Manh&atilde; Coffee Break Brunch Almo&ccedil;o Informal Ch&aacute; da Tarde Happy Hour</td>
+        <td valign="top" class="style3"> R$ 3,90<br />
+          <br />
+        R$ 97,50 <span class="style3">(cada 25)</span><br />
+        <br /> 
+        R$ 195,00 <span class="style3">(cada 50)</span></td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top"><a href="javascript:;" onclick="MM_openBrWindow('<BaseLoja>images/catering/quichetomate.gif','','width=400,height=600')"><img src="<BaseLoja>images/catering/quichetomate.gif" alt="" width="200" height="129" /></a></td>
+        <td valign="top">SALGADOS FAM&Iacute;LIA <br />
+          <br />
+        Escolha as op&ccedil;&otilde;es acima ou ainda: <br />
+        <br />
+        <span class="style3">Strudel The Bakers preparados com aut&ecirc;ntica massa semi-folhada Frango com Catupiry <br />
+        Ricota com Milho <br />
+        Ricota com Espinafre</span>
+         Tortas Salgadas <br />
+          Frango com Catupiry <br />
+            Palmito com Catupiry <br />
+            Berinjela com Cream Cheese<br />
+          Galette Nova Scotia <br />
+          Salm&atilde;o Cream Cheese &amp; Dill </span>        </td>
+        <td valign="top">ideal para 6 pessoas</td>
+        <td valign="top"> Brunch <br />
+        Almo&ccedil;o Informal <br />
+        Ch&aacute; da Tarde </td>
+        <td valign="top" class="style3"> R$ 69,90</td>
+      </tr>
+      <tr><td colspan="5" height="1"><hr size="1"></td></tr>
+      
+      <a name="doces"></a>
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top">MINI DOCES<br />
+          <br />
+          Tarteletes<br /> 
+          <span class="style3">Morango <br />
+          Lim&atilde;o <br />
+          Chocolate com crocante <br />
+          Maracuj&aacute;<br /> 
+          Kiwi <br />
+          Morango com chocolate <br />
+          Uva Brigadeiro </span><br />
+          <br />
+          Eclairs<br /> 
+          <span class="style3">Nutella<br /> 
+          Creme Chocolate <br />
+          Doce de leite <br />
+          Morango <br />
+          Caf&eacute; <br />
+          Brigadeiro <br />
+          Doce de leite com c&ocirc;co </span><br />
+          <br />
+          <span class="style3"><br />
+        </span><br />
+        Danishs &amp; Folhados <br />
+        <span class="style3">Chocolate <br />
+        Banana <br />
+        Ma&ccedil;a <br />
+        Chocolate </span><br />
+        <br />
+        Croissant Chocolate        </td>
+        <td valign="top"> individual <br />
+            <br />
+m&iacute;nimo - 25 unidades<br />
+              <span class="style3">1 sabor</span><br />
+              <br />
+            50 unidades <br />
+  <span class="style3">at&eacute; 2 sabores </span><br />
+  <br />
+            75 unidades <br />
+  <span class="style3">at&eacute; 3 sabores </span><br />
+  <br />
+            100 unidades <br />
+  <span class="style3">at&eacute; 4 sabores</span></td>
+        <td valign="top"> Caf&eacute; da Manh&atilde; Coffee Break Brunch Almo&ccedil;o Informal Ch&aacute; da Tarde Happy Hour</td>
+        <td valign="top" class="style3"> R$ 3,90<br />
+          <br />
+                </td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top">Mini Brownies com <br />
+          <span class="style3">Nozes pecan <br />
+M&amp;M <br />
+Granulado <br />
+Morango Raspa de Chocolate Branco <br />
+Mix de Frutas Secas</span></td>
+        <td valign="top">individual <br />
+          <br />
+          m&iacute;nimo - 25 unidades<br />
+            <span class="style3">1 sabor</span><br />
+            <br />
+            50 unidades <br />
+  <span class="style3">at&eacute; 2 sabores </span><br />
+  <br />
+            75 unidades <br />
+  <span class="style3">at&eacute; 3 sabores </span><br />
+  <br />
+            100 unidades <br />
+  <span class="style3">at&eacute; 4 sabores</span></td>
+        <td valign="top">&nbsp;</td>
+        <td valign="top">R$ 4.90</td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top"><a href="javascript:;" onclick="MM_openBrWindow('<BaseLoja>images/catering/strudel.jpg','','width=400,height=600')"><img src="<BaseLoja>images/catering/strudel.jpg" alt="" width="200" height="129" /></a></td>
+        <td valign="top">STRUDEL DOCES <br />
+          <span class="style3">Chocolate com Nozes Pecan ApfelStrudel (ma&ccedil;&atilde;) <br />
+        Banana com Canela </span></td>
+        <td valign="top"> ideal para 6 pessoas</td>
+        <td valign="top">Brunch Almo&ccedil;o Informal Ch&aacute; da Tarde</td>
+        <td valign="top" class="style3"> R$ 69,90</td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top"><a href="javascript:;" onclick="MM_openBrWindow('<BaseLoja>images/catering/brigabakers_pq.gif','','width=400,height=600')"><img src="<BaseLoja>images/catering/brigabakers_pq.gif" alt="" width="200" height="129" /></a></td>
+        <td valign="top">BRIGABAKERS <br />
+        Brigadeiro de colher<br />
+        <br />
+        <br />
+        Brigadeiro Branco com Nutella<br /> 
+        <span class="style3">Canela <br />
+        Gel&eacute;ia de Damasco<br /> 
+        Gel&eacute;ia de Amora <br />
+        Crocante <br />
+        Nozes </span><br />
+        <br />
+        Brigadeiro Preto com <br />
+        <span class="style3">Tradicional <br />
+        Crocante Nozes<br /> 
+        Baba de Mo&ccedil;a <br />
+        Confeitos de Chocolate</span>         </td>
+        <td valign="top">&nbsp;</td>
+        <td valign="top"> Coffee Break Brunch Almo&ccedil;o Informal Ch&aacute; da Tarde Happy Hour</td>
+        <td valign="top"><span valign="top" class="style3"> R$ 5,90</span></td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top">BOLOS CASEIRO <br />
+          <br />
+          <span class="style3">Laranja<br /> 
+          Banana com A&ccedil;&uacute;car e Canela<br /> 
+          Banana com Mel e Am&ecirc;ndoas Brigadeiro Chocolate <br />
+          Coco <br />
+          Cenoura com calda de chocolate Cremogema <br />
+          Baunilha Marmorizado (baunilha &amp; chocolate) <br />
+          Ma&ccedil;a com Canela<br /> 
+          Mel Noze e Passas <br />
+          Chocolate como Coco</span>         </td>
+        <td valign="top">aproximadamente 10 fatias</td>
+        <td valign="top"> Caf&eacute; da Manh&atilde; Coffee Break Brunch Ch&aacute; da Tarde Happy Hour</td>
+        <td valign="top">R$ 49,90</td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top">MUFFINS <br />
+            <span class="style3">Laranja <br />
+        Banana com A&ccedil;ucar e Canela <br />
+        Banana com Mel e Amendoas Brigadeiro <br />
+        Chocolate <br />
+        Coco <br />
+        Cenoura com calda de chocolate <br />
+        Cremogema<br />
+        Baunilha Marmorizado (baunilha &amp; chocolate) <br />
+        Ma&ccedil;a com Canela<br /> 
+        Mel Noze e Passas <br />
+        Chocolate como Coco</span> </td>
+        <td valign="top"> individual        </td>
+        <td valign="top">Caf&eacute; da Manh&atilde;<br />
+          Coffee Break<br />
+          Brunch<br />
+          Ch&aacute; da Tarde<br />
+        Happy Hour</td>
+        <td valign="top"><br />
+            <span valign="top" class="style3"> R$ 5,90</span></td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top">BISCOITOS  <br />
+            <span class="style3">Baunilha<br />
+          Nozes<br />
+          Palmier tradicional<br />
+          Palmier canela <br />
+          Mackronen (am&ecirc;ndoas)</span><br />
+        </td>
+        <td valign="top"> caixa de aproximadamente 200g</td>
+        <td valign="top">Caf&eacute; da Manh&atilde; Coffee Break Brunch Ch&aacute; da Tarde Happy Hour</td>
+        <td valign="top">R$ 13,90 </td>
+      </tr>
+      <tr><td colspan="5" height="1"><hr size="1"></td></tr>
+      
+      <a name="frutas"></a>
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top">SALADA DE FRUTAS <br />
+            <span class="style3">sele&ccedil;&atilde;o de fruta da esta&ccedil;&atilde;o</span></td>
+        <td valign="top"><br />
+          por&ccedil;&atilde;o individual</td>
+        <td valign="top"> Caf&eacute; da Manh&atilde; Coffee Break Brunch Almo&ccedil;o Informal Ch&aacute; da Tarde Happy Hour </td>
+        <td valign="top"><br />
+            <span valign="top" class="style3"> R$ 5,50</span></td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top">BANDEJA DE FRUTAS FRESCAS &amp; SECAS <br />
+            <span class="style3">sele&ccedil;&atilde;o de fruta da esta&ccedil;&atilde;o e nozes, damasco, am&ecirc;ndoas, passas.<br />
+            <br /> 
+        acompanha 1 molho: Iogurte e mel ou Mel com am&ecirc;ndoas ou Chocolate</span></td>
+        <td valign="top">Tamanho &uacute;nico ideal para 10 pessoas</td>
+        <td valign="top">Caf&eacute; da Manh&atilde; Coffee Break Brunch Almo&ccedil;o Informal Ch&aacute; da Tarde</td>
+        <td valign="top" class="style3"> R$ 129,00</td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top">GR&Atilde;OS <br />
+            <span class="style3">Granola The Bakers <br />
+        Sucrilhos <br />
+        Aveia </span></td>
+        <td valign="top"> 250gr</td>
+        <td valign="top">Caf&eacute; da Manh&atilde; Brunch Ch&aacute; da Tarde</td>
+        <td valign="top">R$ 9,00</td>
+      </tr>
+      <tr><td colspan="5" height="1"><hr size="1"></td></tr>
+      
+      <a name="complementos"></a>
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top"> COMPLEMENTOS <br />
+            <span class="style3">Manteiga com sal <br />
+        Manteiga sem sal <br />
+        Requeij&atilde;o</span> </td>
+        <td valign="top"> 100gr</td>
+        <td valign="top"> Caf&eacute; da Manh&atilde; Brunch Ch&aacute; da Tarde</td>
+        <td valign="top" class="style3"> R$ 5,90</td>
+      </tr>
+      <tr><td colspan="5" height="15">&nbsp;</td></tr>
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td valign="top">COMPLEMENTOS PREMIUM <br />
+            <span class="style3">Cream cheese <br />
+            Catupiry temperado <br />
+            Mel <br />
+            Gel&eacute;ia Morango <br />
+            Gel&eacute;ia Damasco<br /> 
+        Gel&eacute;ia Amora </span></td>
+        <td valign="top"> 100gr</td>
+        <td valign="top"> Caf&eacute; da Manh&atilde; Brunch Ch&aacute; da Tarde</td>
+        <td valign="top" class="style3"> R$ 8,90</td>
+      </tr>
+      
+    </table>
+
+  </div>
+
+</div>
