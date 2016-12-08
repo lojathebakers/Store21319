@@ -1,0 +1,693 @@
+/* Fix IE. Hide from IE Mac \*/
+* html ul li { float: left; }
+* html ul li a { height: 1%; }
+/* End */
+
+/* FastCommerce - Estilo Personalizado (2) */
+
+body {font-size:12px; font-family: Verdana, Arial, sans-serif; color:#666666; text-align:center; }
+p {font-size:12px; font-family: Verdana, Arial, sans-serif;}
+TH {background:#666666;font-size:11px; font-family: Verdana, Arial, sans-serif;}
+TD {font-size:12px; font-family: Verdana, Arial, sans-serif;}
+
+ul, li { margin:0px; padding:0px; }
+
+/* Estilos de fundo */
+.FundoSiteCentro{}
+.FundoTopoExt{}
+.FundoSiteInt{}
+.EstEspacoTopoMenu { display:none; }
+
+/* Estilos para as páginas */
+.Titulos {color:#666666;font-size:12px;font-family:Verdana, Arial, sans-serif;text-decoration:none;font-weight:bold}
+.smSelect {font-size:14px;font-family: Verdana, Arial, sans-serif}
+.smText {font-size:11px;font-family: Verdana, Arial, sans-serif; color:#741012}
+.mnText {font-size:12px;font-family: Verdana, Arial, sans-serif}
+.mdtxt {font-size:16px;font-family: Verdana, Arial, sans-serif}
+.lgtxt {font-size:16pxt;font-weight:bold;color:#666666;font-family: Verdana, Arial, sans-serif;text-decoration:none}
+.TextoPequeno {font-size:7pt;font-family: Verdana, Arial, sans-serif;}
+
+/* Estilos para a capa */
+.EstFotoProd {height:120}
+.EstTexto1 {font-size:14px;font-family: Verdana, Arial, sans-serif;}
+.EstTexto2 {font-size:14px;font-family: Verdana, Arial, sans-serif;}
+.EstTexto3 {font-size:14px;font-family: Verdana, Arial, sans-serif;}
+.EstTexto4 {font-size:14px;font-family: Verdana, Arial, sans-serif;}
+.EstTexto5 {font-size:14px;font-family: Verdana, Arial, sans-serif;}
+.EstNomeProdCapa {font-family:Verdana, Arial, sans-serif;font-size:14px;font-weight:bold;color:#666666}
+.EstListaNomeProdCapa {font-size:14px;font-family: Verdana, Arial, sans-serif}
+.EstDescrProdCapa {font-size:14px;font-family: Verdana, Arial, sans-serif;}
+.EstAdicProdCapa {font-size:14px;font-family: Verdana, Arial, sans-serif;}
+.AdicNomeCapa {font-size:14px;font-family: Verdana, Arial, sans-serif;}
+.AdicItemCapa {font-size:14px;font-family: Verdana, Arial, sans-serif;font-weight:bold;color:#666666}
+.EstPrecoProdCapa {color:#666666;font-size:14px;font-family: Verdana, Arial, sans-serif}
+.EstFundoTabCapa {background:#FFFFFF;font-size:14px;font-family: Verdana, Arial, sans-serif}
+
+/* Estilos para a Barra */
+.FundoBarraDireita{background:#FFFFFF}
+.EstTitSecao {background:#FFFFFF;font-size:14px;color:#666666;font-family: Verdana, Arial, sans-serif;font-weight:bold}
+.EstCorTabExt {background:#EEEEEE}
+.EstCorTabInt {background:#FFFFFF}
+.EstCorTabPromExt {background:#666666}
+.EstCorTabPromInt {background:#F6F6F6}
+.EstListaNomeProdBarra {font-size:16px;font-family: Verdana, Arial, sans-serif;font-weight:bold;color:#666666}
+.EstPrecoProdBarra {font-size:14px;color:#666666;font-family: Verdana, Arial, sans-serif}
+.EstLinhaBarra {background:none; display:none;}
+.EstLinhaBarraExt{background:none; display:none;}
+
+/*  Estilo para os formulários BOTÕES e INPUTs TEXT */
+.InputText {border-color:#000060;border-width:1;border-style:solid;background-color:#F5F5F5;font-size:12px;font-family: Verdana, Arial, sans-serif;color:#666666}
+.InputTextnews {width:207px; height:21px;border:1px #999 solid;font-size:12;font-family: Verdana, Arial, sans-serif;color:#666666}
+.InputTextnews1 {width:207px; height:21px;border:1px #999 solid;font-size:12;font-family: Verdana, Arial, sans-serif;color:#666666}
+.InputTextnews3 {width:207px; height:21px;border:1px #999 solid;font-size:12;font-family: Verdana, Arial, sans-serif;color:#666666}
+.InputTextnews4 {width:207px; height:21px;border:1px #999 solid;font-size:12;font-family: Verdana, Arial, sans-serif;color:#666666}
+.InputTextBusca {height:18px;border-color:#000060;border-width:1;border-style:solid;background-color:#F5F5F5;font-size:11;font-family:Verdana, Arial, sans-serif;color:#666666}
+.InputButton {border-width:1;font-size:11;font-family:Verdana, Arial, sans-serif}
+.InputButtonnews {background-image:url(../images/subscribe_button.gif);background-repeat:no-repeat;background-position:left;border:none;width:29px;height:21px; margin-top:0px;vertical-align:top;}
+
+/*  Estilo BOTÕES */
+.BotLancamento {color:#FF0101;font-size:7pt;font-family: Verdana, Arial, sans-serif}
+.BotComprar {color:#FFFFFF;font-size:1pt;font-family: Verdana, Arial, sans-serif;text-decoration:none;visibility:hidden}
+.BotEsgotado {font-size:8pt;font-family: Verdana, Arial, sans-serif}
+.BotExcluir {font-size:8pt;font-family: Verdana, Arial, sans-serif}
+.BotMaisDetalhes {color:#990000;font-size:7pt;font-family: Verdana, Arial, sans-serif;text-decoration:none}
+
+/*  Texto das Setas de VER MAIS */
+.BotVerMais {color:#741012;font-size:9pt;font-family: Verdana, Arial, sans-serif;font-weight:bold;text-decoration:none}
+.BotVerMais:hover {color:#FF0000;text-decoration:underline}
+
+/*  Fundo do topo e menu */
+.TopoMenu{background:none;}
+.MenuTop {font-size:8pt;font-family: Verdana, Arial, sans-serif;color:#666666;text-decoration:none}
+.MenuTop:visited {color:#666666}
+.MenuTop:active {color:#666666}
+.MenuTop:hover {color:#666666;text-decoration:underline}
+
+/*  Menu 1 (Cinza) */
+.FundoMenu1_On{background-image:url(../images/fundomenu1_on.gif);font-weight:bold;font-size:8pt;font-family: Verdana, Arial, sans-serif;color:#666666;text-decoration:none;cursor:default;width=100%;height:25}
+.FundoMenu1_Off{background-image:url(../images/fundomenu1_off.gif);font-weight:bold;font-size:8pt;font-family: Verdana, Arial, sans-serif;color:#666666;text-decoration:none;cursor:pointer;width=100%;height:25}
+.FundoMenu1_Hover{background-image:url(../images/fundomenu1_hover.gif);font-weight:bold;font-size:8pt;font-family: Verdana, Arial, sans-serif;color:#666666;text-decoration:none;cursor:pointer;width=100%;height:25}
+
+/*  Menu inferior (Cinza) */
+.FundoTopoInf{background-image:url(../images/fundomenuinf.gif)}
+.MenuInfNormal {font-size:7pt;font-family: Verdana, Arial, sans-serif;color:#013C68;text-decoration:none}
+.MenuInfNormal:visited {color:#013C68}
+.MenuInfNormal:active {color:#680101}
+.MenuInfNormal:hover {color:#680101;text-decoration:underline}
+.MenuInfAtual {font-size:7pt;font-family: Verdana, Arial, sans-serif;color:#990000;text-decoration:underline}
+.MenuInfAtual:visited {color:#990000}
+.MenuInfAtual:active {color:#000000}
+.MenuInfAtual:hover {color:#000000;text-decoration:underline}
+
+/*  Menu padrão */
+.TopoMenuAtual {font-weight:bold;font-size:8pt;font-family: Verdana, Arial, sans-serif;color:#972B00;background:#E2E2E2;text-decoration:none}
+.TopoMenuAtual:visited {color:972B00}
+.TopoMenuAtual:active {color:972B00}
+.TopoMenuAtual:hover {color:#2D290C}
+.TopoMenuNormal {font-weight:bold;font-size:8pt;font-family: Verdana, Arial, sans-serif;color:#000000;background:#E2E2E2;text-decoration:none}
+.TopoMenuNormal:visited {color:#000000}
+.TopoMenuNormal:active {color:#000000}
+.TopoMenuNormal:hover {color:#990000}
+
+/*  Menu da ESQUERDA */
+.FundoTopoEsq{background-image:url(../images/fundotopoesq.gif)}
+.FundoBarraEsquerda{background:none;}
+.EsquerdaMenuAtual {font-size:8pt;font-family: Verdana, Arial, sans-serif;color:#46BCF9;background:#246494;text-decoration:none;font-weight:bold}
+.EsquerdaMenuAtual:visited {color:#46BCF9}
+.EsquerdaMenuAtual:active {color:#46BCF9}
+.EsquerdaMenuAtual:hover {color:#FFCC00}
+.EsquerdaMenuNormal {font-size:8pt;font-family: Verdana, Arial, sans-serif;color:White;background:#246494;text-decoration:none;font-weight:bold}
+.EsquerdaMenuNormal:visited {color:White}
+.EsquerdaMenuNormal:active {color:#FFFFFF}
+.EsquerdaMenuNormal:hover {color:#FFCC00;text-decoration:underline}
+
+/*  Estilo do MENU CATEGORIA */
+.EstCatLista{background-image:url(../images/fundomenuesq.gif);padding:6px 3px 6px 30px}
+.CategoriaMenuAtual {font-size:8pt;font-family: Verdana, Arial, sans-serif;color:#78CAF4;background:#246494;text-decoration:none}
+.CategoriaMenuAtual:visited {color:#78CAF4}
+.CategoriaMenuAtual:active {color:#78CAF4}
+.CategoriaMenuAtual:hover {color:#FFCC00}
+.CategoriaMenuNormal {font-size:8pt;font-family: Verdana, Arial, sans-serif;color:White;background:#246494;text-decoration:none}
+.CategoriaMenuNormal:visited {color:White}
+.CategoriaMenuNormal:active {color:#FFCC00}
+.CategoriaMenuNormal:hover {color:#FFCC00}
+
+/*  Estilo CATEGORIA */
+.EstCatNome {color:#F7F7F7;font-size:8pt;font-family: Verdana, Arial, sans-serif;text-decoration:none;font-weight:bold}
+.EstCatNome:visited {color:#F7F7F7}
+.EstCatNome:hover {color:#46BCF9;text-decoration:underline}
+.EstCatDescr {color:black;font-size:8pt;font-family: Verdana, Arial, sans-serif;text-decoration:none}
+
+/*  Estilo PRODUTOS */
+.EstNomeProd {color:#666666;font-size:18px;font-weight:bold;font-family: Verdana, Arial, sans-serif;}
+.EstRefProd {color:#666666;font-size:8pt;font-family: Verdana, Arial, sans-serif}
+.EstDescrProd {font-size:14px;font-family: Verdana, Arial, sans-serif;}
+.EstPrecoProd {color:#666666;font-size:12px;font-family: Verdana, Arial, sans-serif}
+.EstMaisInfo {color:ababab;font-size:7pt;font-family: Verdana, Arial, sans-serif;}
+.AdicNome {font-size:8pt;font-family: Verdana, Arial, sans-serif;} 
+.AdicItem {font-size:8pt;font-family: Verdana, Arial, sans-serif;font-weight:bold;color:#666666}
+.EstLinhaProd {color:#CCCCCC; background-color:#CCCCCC;height:1px;border-width:0;width=100%; border-style:solid; }
+
+/*  Estilo SUBPRODUTOS */
+.EstNomeSubProd {color:#666666;font-size:14px;font-weight:bold;font-family: Verdana, Arial, sans-serif;}
+.EstRefSubProd {color:#000000;font-size:8pt;font-family: Verdana, Arial, sans-serif}
+.EstDescrSubProd {color:#000000;font-size:8pt;font-family: Verdana, Arial, sans-serif}
+.EstPrecoSubProd {color:#333333;font-size:8pt;font-family: Verdana, Arial, sans-serif}
+.EstLinhaSubProd {background:#B2B2B2;height:1px;width=100%}
+.EstCorParSubProd {background:#f3f0f0; border-bottom:1px solid #FFF}
+.EstCorImparSubProd {background:#F9F9F9}
+
+/*  Estilo das opiniões de produtos */
+.EstOpiniaoLinha {color:#CFCFCF;height:1px;width:100%}
+
+/* Estilos do PEDIDO */
+.EstTabPedidoTit {background:#741012;color:#FFF;font-size:8pt;font-family: Verdana, Arial, sans-serif;font-weight:bold}
+.EstTabPedidoNome {color:#333333;font-size:8pt;font-weight:bold;font-family: Verdana, Arial, sans-serif;}
+.EstTabPedidoNome:visited {color:#333333}
+.EstTabPedidoNome:hover {color:#990000}
+.EstTabPedido {font-size:8pt;background:#dedcdd}
+.EstTabPedidoNum {font-size:8pt;background:#dedcdd;font-family:Verdana, Arial, sans-serif}
+.EstTabPedidoTotal {font-size:8pt;background:#c4c4c4;font-weight:bold}
+.EstTabPedidoFrete {font-size:8pt;background:#F4F4F4;font-weight:bold}
+.EstTabPedidoBot {color:#000000;font-size:8pt;font-weight:bold;font-family: Verdana, Arial, sans-serif}
+.EstTabPedidoRef {color:black;font-size:8pt;font-family: Verdana, Arial, sans-serif;}
+.EstTabPedidoAdicNome {font-size:8pt;font-family: Verdana, Arial, sans-serif;}
+.EstTabPedidoAdicItem {font-size:8pt;font-family: Verdana, Arial, sans-serif;font-weight:bold}
+.EstTextoQtd {font-size:8pt;font-family: Verdana, Arial, sans-serif;text-align:right}
+.EstContinuarComprando{font-size:9pt;font-weight:bold;font-family: Verdana, Arial, sans-serif;color:#990000}
+
+/* Estilo de Títulos de Tabela CADASTRO DE CLIENTES, AJUDA, CONFIRMAÇÃO DO PEDIDO */
+.EstTabTopo {font-size:12px; font-weight:bold; color:#a65224; margin:0px 0px 10px 0px; padding:5px 10px; background:#e6e6e6;}
+
+/* Estilo para a tabela de Busca Rápida, para tabela de Ajuda (Pagamentos) e Fale Conosco */
+.EstTabQuadro {background:none;font-size:8pt;font-family: Verdana, Arial, sans-serif}
+
+/* Estilo dos campos do formulário clientes,fale conosco,...    */
+.EstNomeCampo {color:black;font-size:8pt;font-family: Verdana, Arial, sans-serif;font-weight:bold}
+.EstCampo {font-size:8pt;font-family: Verdana, Arial, sans-serif;}
+
+/*  RODAPÉ */
+.FundoRodapeInf{background-image:url(../images/fundorodapeinf.gif)}
+.RodapeMenuNormal {background:#30A1DB;font-size:8pt;font-family: Verdana, Arial, sans-serif;color:#FFFFFF;text-decoration:none}
+.RodapeMenuNormal:visited {color:#FFFFFF}
+.RodapeMenuNormal:active {color:#B5D6F1}
+.RodapeMenuNormal:hover {color:#B5D6F1;text-decoration:underline}
+.RodapeMenuAtual {background:#30A1DB;font-size:8pt;font-family: Verdana, Arial, sans-serif;color:#000000;text-decoration:none;font-weight:bold;}
+
+
+.RodapeMenuAtual:visited {color:#000000}
+.RodapeMenuAtual:active {color:#000000}
+.RodapeMenuAtual:hover {color:#FFFFFF;text-decoration:underline}
+
+/*  Busca - ajax */
+.hideSuggestClass{border:1px solid #D4D4D4;cursor:pointer;background-color:#FFFFFF;height:150px;overflow:auto;display:none;width:200px;margin:0px}
+.showSuggestClass .hideSuggestClass{display:block}
+.showSuggestClass .hoverSuggestClass{background-color:#E4E4E4}
+.productMenuClass{position:absolute;z-index:255}
+.productMenuClass3{position:absolute;z-index:255}
+.productItemClass{margin-left:2px;font-weight:normal;font-size:8pt;font-family: Verdana, Arial, sans-serif;}
+
+/* Personalização elementos da FC */
+
+#TabInterna { }
+table#TabInterna { width:980px; margin:230px auto 15px auto;}
+td.EstEspacoEsquerdaConteudo {width:1px;}
+tr.EstEspacoTopoConteudo {width:680px;}
+td.EstEspacoTopoConteudo {width:680px;}
+
+/*************************************************************************************************************************************************/
+/* C S S   P E R S O N A L I S A D O =========================================================================================================== */
+/*************************************************************************************************************************************************/
+
+img {border:none;}
+a {color:#9c2b23;}
+br.clear {clear:both;}
+fieldset {border:none;}
+input, textarea, select { font-family: Verdana, Arial, sans-serif; }
+
+h2 { 
+    width:590px;
+    height:30px;
+    line-height:30px;
+    font-size:20px;
+    font-weight:normal;
+    color:#FFF;
+    text-align:center;
+    text-transform:uppercase;
+    background:url(../images/fd_h2.gif) no-repeat center center;
+    margin:0px 0px 10px;
+}
+h2.interna { 
+    width:696px;
+    background:url(../images/fd_h2_int.gif) no-repeat center center;
+    float:right;
+    margin-right:22px;
+}
+
+/* BARRA TOPO */
+div#geral_barratopo {
+    width:100%;
+    text-align:center;
+    z-index:999;
+    position: absolute;
+}
+
+    div#barratopo {
+        width:1073px;
+        text-align:left;
+        margin:0px auto;
+        position:relative;
+        top: 0px;
+        z-index:999;
+
+    }
+
+    div#barratopo h1 {
+        margin:0px;
+        padding:0px;
+        display:block;
+        position:absolute;
+        top:0px;
+        left:30px;
+    }
+    
+    div#barratopo div.menu {
+        width:1073px;
+        height:55px;
+        margin:28px 0px 10px -27px; 
+        background:url(../images/bg_menutopo.gif) no-repeat top left;
+        padding-left: 80px;
+        list-style:none;
+        display:block;
+        float:left;
+        z-index:999;
+        position:absolute;
+    }
+        div#barratopo div.menu div {
+            float:left;
+            font-family: Verdana, Arial, sans-serif;
+            margin:15px 16px 0px 27px;
+            padding:0px;
+        z-index:999;
+        }
+            div#barratopo div.menu div a {
+                color: #fff;
+                text-decoration:none;
+            }
+            div#barratopo div.menu div a:hover {
+                color: #fff;
+                text-decoration:none;
+            }
+            
+            /*div#barratopo div#entregas {
+                width:747px;
+                height:42px;
+                background:#934000;
+                float:right;
+                margin:0px 22px 10px 0px;
+            }*/
+            
+        div#barratopo div.indique {
+        top: 0px;
+        right: 85px;
+        position: absolute;
+        float: right;
+        
+        }
+        div#barratopo div.indique fieldset {
+        width:160px;
+        
+        }
+        div#barratopo div.indique fieldset p {
+                font-size:10px;
+                color:#9c2b23;
+        }
+        
+        div#barratopo div.indique legend {
+            font-size:16px;
+            font-weight:normal;
+            color:#a8382c;
+        }
+    
+        div#barratopo div.indique label {
+            font-size:11px;
+            font-weight:normal;
+            color:#846e45;
+        }
+    
+        div#barratopo div.indique input.text {
+            width:160px;
+            margin-bottom:5px;
+            background:#fefefc;
+            border:solid 1px #bba587;
+        }
+        div#barratopo div.indique input.image {
+            float:right;
+            margin-right:12px;
+        }
+        div#rodape div.indique {
+        top: 60px;
+        left: 480px;
+        position:relative;
+        float: left;
+        
+        }
+        div#rodape div.indique fieldset {
+        width:160px;
+        
+        }
+        div#rodape div.indique fieldset p {
+                font-size:10px;
+                color:#9c2b23;
+        }
+        
+        div#rodape div.indique legend {
+            font-size:16px;
+            font-weight:normal;
+            color:#a8382c;
+        }
+    
+        div#rodape div.indique label {
+            font-size:11px;
+            font-weight:normal;
+            color:#846e45;
+        }
+    
+        div#rodape div.indique input.text {
+            width:160px;
+            margin-bottom:5px;
+            background:#fefefc;
+            border:solid 1px #bba587;
+        }
+        div#rodape div.indique input.image {
+            float:left;
+            margin-right:12px;
+        }
+    
+            
+            div#barratopo div#recursos {
+                width:747px;
+                height:42px;
+                float:right;
+                margin:0px 22px 10px 0px;
+                
+            }
+                div#barratopo div#recursos div.busca {
+                    width:400px;
+                    float:left;
+                    line-height:50px;
+                    vertical-align:middle;
+                }
+                    div#barratopo div#recursos div.busca label {
+                        color:#602c07;
+                        font-size:14px;
+                        text-transform:uppercase;
+                    }
+                    div#barratopo div#recursos div.busca input.text {
+                        width:196px;
+                        height:auto;
+                        margin:0px 10px;
+                        padding:1px 2px;
+                        background:#FFF;
+                        border:solid 1px #612d08;
+                    }
+                    div#barratopo div#recursos div.busca input.image {
+                        width:29px;
+                        height:21px;
+                        display:block;
+                        background:url(../images/bt_ok.gif) no-repeat top left;
+                        border:none;
+                        display:inline;
+                        cursor:pointer;
+                    }
+                    
+                div#barratopo div#recursos div.links { float:right; }
+                
+                div#barratopo div#recursos div.links ul { list-style:none; }
+                
+                div#barratopo div#recursos div.links ul li { margin-left:20px; float:right; }
+
+
+/* BARRA ESQUERDA */
+div#barraesquerda {
+    width:200px;
+    height:auto;
+    margin-left:22px;
+}
+
+div#barraesquerda ul.menu {
+    list-style:none;
+}
+    div#barraesquerda ul.menu,
+    div#barraesquerda ul,
+    div#barraesquerda li { margin:0px; padding:0px; }
+    
+    div#barraesquerda ul.menu li {
+        width:183px;
+        margin-bottom:8px;
+        display:block;
+        background:#602c07;
+        font-weight:bold;
+        font-size:14px;
+        color:#fefefe;
+        text-align:center;
+        text-decoration:none;
+        line-height:30px;
+    }
+        div#barraesquerda ul.menu li ul li {
+            width:183px;
+            margin:0px 0px;
+            font-size:12px;
+            font-weight:normal;
+            text-align:left;
+            line-height:26px;
+            background:none;
+        }
+            div#barraesquerda ul.menu li ul li a {
+                display:block;
+                padding-left:14px;
+                background:#fefefc;
+                color:#846e45;
+                text-decoration:none;
+                border-bottom:solid 1px #dfdfdf;
+            }
+                div#barraesquerda ul.menu li ul li a:hover {
+                    background:#846e45;
+                    color:#FFF;
+                }
+                
+                div#barraesquerda ul.menu li ul li ul {
+                    display:none;
+                }
+                    div#barraesquerda ul.menu li ul li ul li a {
+                        padding-left:28px;
+                    }
+
+
+/* RODAPE */
+div#geral_rodape {
+    width:100%;
+    position:relative;
+    left:-40px;
+    margin-top:20px;
+    text-align:center;
+}
+    div#rodape {
+        width:1000px;
+        text-align:left;
+        padding-top:20px;
+        margin:0px auto;
+    }
+        div#rodape a { text-decoration:none; }
+
+        div#rodape ul.menu {
+            width:135px;
+            height:50px;
+            float:left;
+            list-style-image:url(../images/bullet_rodape.gif);
+            margin-top:15px;
+            margin-left:85px;
+            padding:0px;
+        }
+        
+        div#rodape ul.menu1 {
+            width:180px;
+            height:50px;
+            float:left;
+            list-style-image:url(../images/bullet_rodape.gif);
+            margin-top:15px;
+            padding:0px;
+        }
+        
+        div#rodape ul.menu2 {
+            width:130px;
+            height:50px;
+            float:left;
+            list-style-image:url(../images/bullet_rodape.gif);
+            margin-top:15px;
+            padding:0px;
+        }
+        
+        div#rodape ul.menu li {
+            margin:0px;
+            padding:0px;
+            line-height:36px;
+            font-size:11px;
+            font-family:Verdana, Arial, sans-serif;
+        }
+        
+        div#rodape ul.menu1 li {
+            margin:0px;
+            padding:0px;
+            line-height:36px;
+            font-size:11px;
+            font-family:Verdana, Arial, sans-serif;
+        }
+        
+        div#rodape ul.menu2 li {
+            margin:0px;
+            padding:0px;
+            line-height:36px;
+            font-size:11px;
+            font-family:Verdana, Arial, sans-serif;
+        }
+        
+        div#rodape ul.menu li a { color: #666666 }
+        
+        div#rodape ul.menu1 li a { color: #666666 }
+        
+        div#rodape ul.menu2 li a { color: #666666 }
+        
+        div#rodape ul.menu li a:hover { color: #666 }
+        
+        div#rodape ul.menu1 li a:hover { color: #666 }
+        
+        div#rodape ul.menu2 li a:hover { color: #666 }
+        
+        div#rodape div.infos { clear:both; }
+        
+        div#rodape div.infos div.contatos { 
+            width:520px;
+            margin:0px auto 15px;
+            padding-bottom:15px;
+            border-bottom:solid 1px #602c07;
+            font-weight:bold;
+        }
+            div#rodape div.infos div.creditos {
+                margin-bottom:15px;
+            }
+
+/* HOME */
+div#home {
+    width:980px;
+    top:0px;
+    margin-top:10px;
+    padding-top:0px;
+    height:auto;
+}
+
+
+    div#home div.ordem label {
+        margin:0px 10px 0px 5px;
+        font-size:10px;
+        font-weight:bold;
+        text-transform:uppercase;
+        letter-spacing:.05em;
+    }
+    div#home div.ordem select {
+        background:#fefefc;
+        border:1px solid #612d08;
+    }
+    
+    div#home div.produtos {
+        width:980px;
+        padding-left:0px;
+        height:auto;
+        float:left;
+    }
+    
+    div#home div.banners {
+        width:165px;
+        height:auto;
+        float:right;
+    }
+
+
+/* Estilo Produto Out */
+div.estProd1 {
+    width:220px;
+    text-align:left;
+    color:#666666;
+}
+    div.estProd1 a {
+        color:#666;
+        text-decoration:none;
+    }
+
+    div.estProd1 form {
+        margin:5px 0px 5px 0px;
+    }
+    div.estProd1 form table {
+        width:100%;
+        text-align:center;
+    }
+    
+    div.estProd1 td.img {
+        height:145px;
+        text-align:center;
+        vertical-align: top;
+        
+    }
+    
+    div.estProd1 div.quadroimg {
+        border:1px #ccc solid; padding:2px; width: 220px; height: 145px; 
+        
+    }   
+    div.estProd1 div.nome {
+        font-size:14px;
+        text-align:center;
+    }
+    
+    div.estProd1 div.preco {
+        font-size:12px;
+        text-align:center;
+        text-transform:uppercase;
+    }
+        div.estProd1 div.preco b { font-weight:normal; }
+
+    div.estProd1 div.descricao { font-size:11px; margin-bottom:5px; }
+
+
+/* Páginas custom */
+div#cont_interno {
+    width:655px;
+    float:left;
+    text-align:left;
+}
+
+div.att_empresas {
+    width:980px;
+    float:left;
+}
+    div.att_empresas .fl,
+    div.att_empresas .fr {
+        text-align:left;
+    }
+
+.fl { float:left; }
+.fr { float:right; }
+.mr { margin-right:10px; }
+
+/* Dados da cesta - ajax */
+ul#TopoMenuTodos {list-style:none;margin:7px 7px 7px 0px}
+ul#TopoMenuTodos li {display:block;width:230px;list-style:none;}
+ul#TopoMenuTodos li a span {font-size:0;visibility:hidden;}
+ul#TopoMenuTodos li ul {display:none;position:absolute;background:#FFFFFF;width:350px;height:180px;border:1px solid #445B71;padding:0px 0px 0px 0px;z-index:3;margin:0px 0px 0px 0px}
+ul#TopoMenuTodos li:hover ul, ul#TopoMenuTodos li.over ul {display:block;}
+ul#TopoMenuTodos li ul li {float:left;width:33%;height:auto;padding:1px 0px 0px 0px}
+ul#TopoMenuTodos li ul li a {color:#6B8AA9;font-size:10px;padding:0px 0px 0px 0px }
+ul#TopoMenuTodos li ul li#menuCatalogo {float:none;clear:left;width:100%;border-top:1px solid #C4C4C4;position:relative;top:20px;padding-bottom:20px;text-align:center;}
+ul#TopoMenuTodos li ul li#TitCartFC {color:blue;font-size:8pt;font-family:tahoma,verdana;font-weight:bold}
+#NomeCategoriaCat {font-family:Arial;font-size:14px;padding:10px 0px 0px 30px;color:#000000}
+
+#idCliCampo1 .EstNomeCampo {color:#ff2200}
