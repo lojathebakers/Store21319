@@ -1,0 +1,310 @@
+<script type="text/javascript" src="<BaseLoja>htm/jquery.js"></script>
+<script type="text/javascript" src="<BaseLoja>htm/principal.js"></script>
+<!-- scritp Googlefont -->
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Open+Sans:sans-serif' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+<!-- scritp Googlefont -->
+
+<!-- scritp Facebook -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- scritp Facebook -->
+
+<script>
+navHover = function() {
+	var lis = document.getElementById("idMenuCat1").getElementsByTagName("LI");
+	for (var i=0; i<lis.length; i++) {
+		lis[i].onmouseover=function() {
+			this.className+=" iehover";
+		}
+		lis[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" iehover\\b"), "");
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", navHover);
+</script>
+
+<style>
+#idMenuCat1 .wid{width:0px; z-index:9999;}
+
+/* Root = Horizontal, Secondary = Vertical */
+ul#idMenuCat1 {
+  margin:0 0 0 10;
+  border: 0 none;
+  padding: 0;
+  width: 100%; /*For KHTML*/
+  list-style: none;
+  height: 24px;
+   z-index:9999;
+   
+}
+
+ul#idMenuCat1 li {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  float: left; /*For Gecko*/
+  display: inline;
+  list-style: none;
+  position: relative;
+  height: 24px;
+   z-index:9999;
+   
+}
+
+ul#idMenuCat1 ul {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  width: 90px;
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 24px;
+  left: 0;
+   z-index:9999;
+   
+   
+}
+
+ul#idMenuCat1 ul:after /*From IE 7 lack of compliance*/{
+  clear: both;
+  display: block;
+  font: 1px/0px serif;
+  content: ".";
+  height: 0;
+  visibility: hidden;
+   z-index:9999;
+}
+
+ul#idMenuCat1 ul li {
+  width: 90px;
+  float: left; /*For IE 7 lack of compliance*/
+  display: block !important;
+  display: inline; /*For IE*/
+   z-index:9999;
+  width: 220px;
+   
+}
+
+/* Root Menu */
+ul#idMenuCat1 a {
+  padding: 2 0px;
+  float: none !important; /*For Opera*/
+  float: left; /*For IE*/
+  display: block;
+  width:90px;
+  font-size:1px;
+  background-color: #fff;
+  height:30px;
+  background: no-repeat url(http://thebakers.lojavirtualfc.com.br/lojas/00021319/images/menuhoriz_produtos.gif);
+  text-decoration: none;
+   z-index:9999;
+}
+
+/* Root Menu Hover Persistence */
+ul#idMenuCat1 a:hover,
+ul#idMenuCat1 li:hover a,
+ul#idMenuCat1 li.iehover a {
+  padding: 2 0px;
+  background: #fff;
+  font-size:1px;
+  height:30px;
+  background: no-repeat url(http://thebakers.lojavirtualfc.com.br/lojas/00021319/images/menuhoriz_produtos.gif);
+  width:90px;
+  color: #fff;
+}
+
+/* 2nd Menu */
+ul#idMenuCat1 li:hover li a,
+ul#idMenuCat1 li.iehover li a {
+  padding: 6 0 2 8px;
+  float: none;
+  font-size:11px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform:uppercase;
+  color: #666;
+  background: #EEE;
+  width:170px;
+  color: #666;
+  border:solid 1px #FFF
+}
+
+/* 2nd Menu Hover Persistence */
+ul#idMenuCat1 li:hover li a:hover,
+ul#idMenuCat1 li:hover li:hover a,
+ul#idMenuCat1 li.iehover li a:hover,
+ul#idMenuCat1 li.iehover li.iehover a {
+  padding: 6 0 2 8px;
+  background: #CCC; 
+  color: #FFF;
+  font-size:11px;
+  text-transform:uppercase;
+  width:170px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666; 
+  border:solid 1px #FFF
+}
+
+/* 3rd Menu */
+ul#idMenuCat1 li:hover li:hover li a,
+ul#idMenuCat1 li.iehover li.iehover li a {
+  background: #EEE;
+  width:170px;
+  color: #666;
+}
+
+/* 3rd Menu Hover Persistence */
+ul#idMenuCat1 li:hover li:hover li a:hover,
+ul#idMenuCat1 li:hover li:hover li:hover a,
+ul#idMenuCat1 li.iehover li.iehover li a:hover,
+ul#idMenuCat1 li.iehover li.iehover li.iehover a {
+  background: #CCC;
+  width:170px;
+  color: #FFF;
+  font-size:14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 4th Menu */
+ul#idMenuCat1 li:hover li:hover li:hover li a,
+ul#idMenuCat1 li.iehover li.iehover li.iehover li a {
+  background: #EEE;
+  color: #666;
+  font-size:14px;
+  width:170px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 4th Menu Hover */
+ul#idMenuCat1 li:hover li:hover li:hover li a:hover,
+ul#idMenuCat1 li:hover li:hover li:hover li:hover a,
+ul#idMenuCat1 li.iehover li.iehover li.iehover li a:hover,
+ul#idMenuCat1 li.iehover li.iehover li.iehover li.iehover a {
+  background: #CCC;
+  color: #FFF;
+  font-size:14px;
+  width:170px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* 5th Menu */
+ul#idMenuCat1  li:hover li:hover li:hover li:hover li a,
+ul#idMenuCat1 li.iehover li.iehover li.iehover li.iehover li a {
+  background: #EEE;
+  color: #666;
+  font-size:14px;
+  width:170px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 5th Menu Hover */
+ul#idMenuCat1-v li:hover li:hover li:hover li:hover li a:hover,
+ul#idMenuCat1-v li.iehover li.iehover li.iehover li.iehover li a:hover {
+  background: #CCC;
+  color: #FFF;
+  font-size:14px;
+  width:170px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul#idMenuCat1 ul ul,
+ul#idMenuCat1 ul ul ul,
+ul#idMenuCat1 ul ul ul ul,
+ul#idMenuCat1 ul ul ul ul ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 160px;
+   z-index:9999;
+}
+
+/* Do Not Move - Must Come Before display:block for Gecko */
+ul#idMenuCat1 li:hover ul ul,
+ul#idMenuCat1 li:hover ul ul ul,
+ul#idMenuCat1 li:hover ul ul ul ul,
+ul#idMenuCat1 li:hover ul ul ul ul ul,
+ul#idMenuCat1 li.iehover ul ul,
+ul#idMenuCat1 li.iehover ul ul ul,
+ul#idMenuCat1 li.iehover ul ul ul ul,
+ul#idMenuCat1 li.iehover ul ul ul ul ul {
+  display: none;
+   z-index:9999;
+}
+
+ul#idMenuCat1 li:hover ul,
+ul#idMenuCat1 ul li:hover ul,
+ul#idMenuCat1 ul ul li:hover ul,
+ul#idMenuCat1 ul ul ul li:hover ul,
+ul#idMenuCat1 ul ul ul ul li:hover ul,
+ul#idMenuCat1 li.iehover ul,
+ul#idMenuCat1 ul li.iehover ul,
+ul#idMenuCat1 ul ul li.iehover ul,
+ul#idMenuCat1 ul ul ul li.iehover ul,
+ul#idMenuCat1 ul ul ul ul li.iehover ul {
+  display: block;
+   z-index:9999;
+}
+</style>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+    	<td>
+<div id="geral_barratopo"> 
+	<div id="barratopo"> 
+<table width="1073" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+    	<td><img src=images/shim.gif width=22 height=1></td>
+        <td width="180px"><a href="Home.asp?IDLoja=<IDLoja>" title="Voltar para a Home"><img src="<BaseLoja>images/LogoTopo.gif" alt="The Bakers" /></a></td>
+        <td width="540px" align="left"><img src="<BaseLoja>images/banner_home_fc.jpg" alt="The Bakers" /></td>
+        <td><img src=<BaseLoja>images/subscribe_title.gif /><br />
+        <form name=Form1news action="/newsletter.asp" method=GET onsubmit="return Valida(this)">
+                  <input border=0 type=hidden name=IDLoja value=21319>
+                  <input name=Email id=Email size=28 maxlength=50 value="Digite aqui o seu email" onclick="if(this.value=='Digite aqui o seu email')this.value=''" class=InputTextnews1><input type=submit name=EnviarAssinante id=EnviarAssinante value=' . ' class=InputButtonnews>
+        
+                    <span style="display:none"><input type=radio name=FormatoHTML id=FormatoHTMLTrue value=True checked><label for=FormatoHTMLTrue></label>
+                    <input type=radio name=FormatoHTML id=FormatoHTMLNenhum value=Nenhum><label for=FormatoHTMLNenhum></label></span></form>
+        <img src=<BaseLoja>images/img_conectese.jpg /><br /><div class="fb-like" style=" margin-left:0px; margin-top:4px" data-href="https://www.facebook.com/pages/The-Bakers/196567367039478" data-send="true" data-layout="button_count" data-width="300" data-height="300"  data-show-faces="true" data-font="verdana"></div>
+       	</td>
+	</tr>
+    <tr>
+    	<td colspan="4"><img src=images/shim.gif width=1 height=10></td>
+	</tr>
+    <tr> 
+		<td colspan="4" height="50px"> 
+        	<table width="100%" height="50px" cellpadding="0" cellspacing="0" border="0" style="margin-left:-25px;background:url(<BaseLoja>images/bg_menutopo.gif) no-repeat;">
+				<tr>
+    				<td><img src=images/shim.gif width=40 height=1></td>
+                    <td width="135"><ListPathCat out="2"></td>
+					<td width="125"><a href="Custom.asp?IDLoja=<IDLoja>&arq=a_the_bakers.html" title="A The Bakers"><img src="<BaseLoja>images/menuhoriz_thebakres.gif" alt="The Bakers" /></a></td>
+            		<td width="125"><a href="Custom.asp?IDLoja=<IDLoja>&arq=cardapio.html" title="Cardápio"><img src="<BaseLoja>images/menuhoriz_cardapio.gif" alt="CARDÁPIOS" /></a></td>
+           			<td width="125"><a href="Custom.asp?IDLoja=<IDLoja>&arq=lojas.html" title="Endereços"><img src="<BaseLoja>images/menuhoriz_enderecos.gif" alt="ENDEREÇOS" /></a></td>
+           			<td width="125"><a href="Cadastro.asp?IDLoja=<IDLoja>" title="Cadastro"><img src="<BaseLoja>images/menuhoriz_cadastro.gif" alt="CADASTRO" /></a></td>
+           			<td width="230"><a href="Custom.asp?IDLoja=<IDLoja>&arq=atendimento_empresas.html" title="Atendimento à empresas"><img src="<BaseLoja>images/menuhoriz_catering.gif" alt="ATENDIMENTO ÀS EMPRESAS" /></a></td>
+           			<td><a href="FaleConosco.asp?IDLoja=<IDLoja>" title="Fale Conosco"><img src="<BaseLoja>images/menuhoriz_fale.gif" alt="FALE CONOSCO" /></a></td>
+				</tr> 
+			</table>
+		</td>
+	</tr>
+</table>
+</div></div>		</td>
+	</tr>
+</table>
