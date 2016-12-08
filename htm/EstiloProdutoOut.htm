@@ -1,0 +1,19 @@
+<p1>
+	<div class="estProd1">
+		<a href="ListaProdutos.asp?IDLoja=<IDLoja>&IDProduto=<IDProduto>"><div class="quadroimg"><ImagemProd></div></a>
+		<div class="nome" style="width:220px;">
+			<a href="ListaProdutos.asp?IDLoja=<IDLoja>&IDProduto=<IDProduto>"><NomeProd></a>
+		</div>
+		<div class="preco" style="width:220px;">
+			<a href="ListaProdutos.asp?IDLoja=<IDLoja>&IDProduto=<IDProduto>"><script>
+if(<PrecoNum>>0){
+document.write("<PrecoSimples>");
+}
+else{
+ document.write("<a href='/prod,idloja,<idlojanum>,idproduto,<IDProduto>,<NomeProdUA>'>Mais Detalhes</a>");
+}
+</script></a>
+		</div><br />
+<br />
+	</div>
+</p1>
