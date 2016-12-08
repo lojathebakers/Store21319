@@ -1,0 +1,49 @@
+<script>MostraDadosCesta();</script>
+
+<script>
+if(sPag.indexOf("ADDPRODUTO.ASP")>0 && sPag.indexOf("FINALIZA")>0){
+document.Lista.Comprar.click();
+}
+</script>
+
+<div id="geral_rodape">
+	<div id="rodape">
+    <hr noshade="noshade" size="1" color="#CCCCCC" style="color:#CCC" width="1073px">
+		<ul class="menu">
+			<li><a href="#" title="Formas de pagamento">The Bakers</a></li>
+			<li><a href="#" title="Compartilhe">Nossas Lojas</a></li>
+			<li><a href="#" title="Parcerias">Fale Conosco</a></li>
+		</ul>
+		<ul class="menu1">
+			<li><a href="#" title="Compartilhe">Cardápio Tortas</a></li>
+			<li><a href="#" title="Parcerias">Cardápio Copacabana</a></li>
+			<li><a href="#" title="Segurança">Cardápio Ipanema</a></li>
+		</ul>
+        <ul class="menu2">
+			<li><a href="#" title="Formas de pagamento">Faça um Orçamento</a></li>
+			<li><a href="#" title="Compartilhe">Seus Pedidos</a></li>
+			<li><a href="#" title="Parcerias">Dúvidas</a></li>
+		</ul>
+
+<!--		<div class="infos">
+			<div class="contatos">Telefones   Copacabana (21) 3209-1212   Ipanema  (21) 3201-5050</div>
+			<div class="creditos">Copyright © 2009 - Todos os direitos reservados - www.thebakers.com.br</div>
+		</div>-->
+	</div>
+<table><tr><td><table><tr><td>
+<br />
+<img src=<BaseLoja>images/subscribe_title.gif /><br />
+<form name=Form1news action="/newsletter.asp" method=GET onsubmit="return Valida(this)">
+          <input border=0 type=hidden name=IDLoja value=21319>
+          <input name=Email id=Email size=35 maxlength=50 value="Digite aqui o seu email" onclick="if(this.value=='Digite aqui o seu email')this.value=''" class=InputTextnews1><input type=submit name=EnviarAssinante id=EnviarAssinante value=' . ' class=InputButtonnews>
+
+			<span style="display:none"><input type=radio name=FormatoHTML id=FormatoHTMLTrue value=True checked><label for=FormatoHTMLTrue></label>
+			<input type=radio name=FormatoHTML id=FormatoHTMLNenhum value=Nenhum><label for=FormatoHTMLNenhum></label></span>
+			
+</form></td></tr></table></td><td valign="top">
+<table><tr><td><img src=images/shim.gif width=15 height=1></td><td><br /><img src=<BaseLoja>images/img_conectese.jpg /><br /><div class="fb-like" style=" margin-left:0px; margin-top:4px" data-href="https://www.facebook.com/pages/The-Bakers/196567367039478" data-send="true" data-layout="button_count" data-width="300" data-height="300"  data-show-faces="true" data-font="verdana"></div></td></tr></table></td>
+</tr></table>
+
+</div>
+
+	
