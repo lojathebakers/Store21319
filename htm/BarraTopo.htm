@@ -1,0 +1,463 @@
+<script>
+var IDLojaAS='<IDLoja>'
+var CaminhoProdAS='<BaseLoja>prod/' 
+var g1='5'; //Quantidade de itens do grupo g1(Termos), Padrão 5, Máximo 9, 0 Não exibe
+var g2='3'; //Quantidade de itens do grupo g2(Páginas), Padrão 3, Máximo 9, 0 Não exibe
+var g3='5'; //Quantidade de itens do grupo g3(Produtos), Padrão 5, Máximo 9, 0 Não exibe
+var g4='0'; //Quantidade de itens do grupo g4(Notícias), Padrão 3, Máximo 9, 0 Não exibe
+</script>
+<link href="<baseloja>htm/jquery_ui.css" rel="stylesheet"> <script language="JavaScript" src="/jquery-1.8.2.min.js"></script>
+<script language="JavaScript" src="/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="<BaseLoja>htm/autosuggest.js"></script>
+<!--[if IE]>
+<style type="text/css">.ui-autocomplete-category{margin-top: -2px}</style>
+<![endif]--> <script type="text/javascript" src="<BaseLoja>htm/jquery.js"></script>
+<script type="text/javascript" src="<BaseLoja>htm/principal.js"></script>
+<!-- scritp Googlefont --> <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Open+Sans:sans-serif' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+<!-- scritp Googlefont --> <!-- scritp Facebook -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- scritp Facebook --> <script>
+navHover = function() {
+    var lis = document.getElementById("idMenuCat1").getElementsByTagName("LI");
+    for (var i=0; i<lis.length; i++) {
+        lis[i].onmouseover=function() {
+            this.className+=" iehover";
+        }
+        lis[i].onmouseout=function() {
+            this.className=this.className.replace(new RegExp(" iehover\\b"), "");
+        }
+    }
+}
+if (window.attachEvent) window.attachEvent("onload", navHover);
+</script>
+<style type="text/css">
+#idMenuCat1 .wid{width:0px}
+
+/* Root = Horizontal, Secondary = Vertical */
+ul#idMenuCat1 {
+  margin: 0;
+  margin-left: 95px;
+  margin-top:0px;
+  border: 0 none;
+  padding: 0;
+  padding-bottom: 0px;
+  width: 100%; /*For KHTML*/
+  list-style: none;
+  height: 24px;
+}
+
+ul#idMenuCat1 li {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  padding-right:0px;
+  float: left; /*For Gecko*/
+  display: inline;
+  list-style: none;
+  position: relative;
+}
+
+ul#idMenuCat1 ul {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  width: 265px;
+  list-style: none;
+  display: none;
+  position: absolute;
+  left: 0;
+}
+
+ul#idMenuCat1 ul:after /*From IE 7 lack of compliance*/{
+  clear: both;
+  display: block;
+  font: 1px/0px serif;
+  content: ".";
+  height: 0;
+  visibility: hidden;
+}
+
+ul#idMenuCat1 ul li {
+  width: 225px;
+  margin-left: 0px;
+  margin-top:0;
+  float: left; /*For IE 7 lack of compliance*/
+  display: block !important;
+  display: inline; /*For IE*/
+  background: #fff;
+  padding: 0;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Root Menu */
+ul#idMenuCat1 a {
+  padding: 0 32px;
+  float: none !important; /*For Opera*/
+  float: left; /*For IE*/
+  display: block;
+  color: #666;
+  font: normal 16px/22px Helvetica, Arial, Verdana, sans-serif;
+  text-decoration: none;
+  height: auto !important;
+  height: 1%; /*For IE*/
+}
+
+/* Root Menu Hover Persistence */
+ul#idMenuCat1 a:hover,
+ul#idMenuCat1 li:hover a,
+ul#idMenuCat1 li.iehover a {
+  background: #fff;
+  color: #000;
+}
+
+/* 2nd Menu */
+ul#idMenuCat1 li:hover li a,
+ul#idMenuCat1 li.iehover li a {
+  float: none;
+  background: #fff;
+  left: 0px;
+  top: 0px;
+  color: #666;
+  font: normal 14px/22px Helvetica, Arial, Verdana, sans-serif;
+}
+
+/* 2nd Menu Hover Persistence */
+ul#idMenuCat1 li:hover li a:hover,
+ul#idMenuCat1 li:hover li:hover a,
+ul#idMenuCat1 li.iehover li a:hover,
+ul#idMenuCat1 li.iehover li.iehover a {
+  border: none;
+  background: #ccc;
+  color: #000;
+}
+
+/* 3rd Menu */
+ul#idMenuCat1 li:hover li:hover li a,
+ul#idMenuCat1 li.iehover li.iehover li a {
+  background: #EEE;
+  color: #666;
+}
+
+/* 3rd Menu Hover Persistence */
+ul#idMenuCat1 li:hover li:hover li a:hover,
+ul#idMenuCat1 li:hover li:hover li:hover a,
+ul#idMenuCat1 li.iehover li.iehover li a:hover,
+ul#idMenuCat1 li.iehover li.iehover li.iehover a {
+  background: #CCC;
+  color: #FFF;
+}
+
+/* 4th Menu */
+ul#idMenuCat1 li:hover li:hover li:hover li a,
+ul#idMenuCat1 li.iehover li.iehover li.iehover li a {
+  background: #EEE;
+  color: #666;
+}
+
+/* 4th Menu Hover */
+ul#idMenuCat1 li:hover li:hover li:hover li a:hover,
+ul#idMenuCat1 li:hover li:hover li:hover li:hover a,
+ul#idMenuCat1 li.iehover li.iehover li.iehover li a:hover,
+ul#idMenuCat1 li.iehover li.iehover li.iehover li.iehover a {
+  background: #CCC;
+  color: #FFF;
+}
+
+
+/* 5th Menu */
+ul#idMenuCat1  li:hover li:hover li:hover li:hover li a,
+ul#idMenuCat1 li.iehover li.iehover li.iehover li.iehover li a {
+  background: #EEE;
+  color: #666;
+}
+
+/* 5th Menu Hover */
+ul#idMenuCat1-v li:hover li:hover li:hover li:hover li a:hover,
+ul#idMenuCat1-v li.iehover li.iehover li.iehover li.iehover li a:hover {
+  background: #CCC;
+  color: #FFF;
+}
+
+ul#idMenuCat1 ul ul,
+ul#idMenuCat1 ul ul ul,
+ul#idMenuCat1 ul ul ul ul,
+ul#idMenuCat1 ul ul ul ul ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 160px;
+}
+
+/* Do Not Move - Must Come Before display:block for Gecko */
+ul#idMenuCat1 li:hover ul ul,
+ul#idMenuCat1 li:hover ul ul ul,
+ul#idMenuCat1 li:hover ul ul ul ul,
+ul#idMenuCat1 li:hover ul ul ul ul ul,
+ul#idMenuCat1 li.iehover ul ul,
+ul#idMenuCat1 li.iehover ul ul ul,
+ul#idMenuCat1 li.iehover ul ul ul ul,
+ul#idMenuCat1 li.iehover ul ul ul ul ul {
+  display: none;
+}
+
+ul#idMenuCat1 li:hover ul,
+ul#idMenuCat1 ul li:hover ul,
+ul#idMenuCat1 ul ul li:hover ul,
+ul#idMenuCat1 ul ul ul li:hover ul,
+ul#idMenuCat1 ul ul ul ul li:hover ul,
+ul#idMenuCat1 li.iehover ul,
+ul#idMenuCat1 ul li.iehover ul,
+ul#idMenuCat1 ul ul li.iehover ul,
+ul#idMenuCat1 ul ul ul li.iehover ul,
+ul#idMenuCat1 ul ul ul ul li.iehover ul {
+  display: block;
+}</style>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody>
+        <tr>
+            <td>
+            <div id="geral_barratopo">
+            <div id="barratopo">
+            <table border="0" cellpadding="0" cellspacing="0" width="1073">
+                <tbody>
+                    <tr>
+                        <td><img height="1" src="images/shim.gif" width="22"></td>
+                        <td width="180px">
+                        <a href="Home.asp?IDLoja=<IDLoja>" title="Voltar para a Home"><img alt="The Bakers" src="<baseloja>images/LogoTopo.gif"></a>
+                        </td>
+                        <td align="left" width="540px">
+                        <div style="width:500px; margin-left:39px"><script>function VerTextoBS(oForm){if (oForm.Texto.value==''){alert('Digite antes sua busca.');oForm.Texto.focus();return false;}else{return true;}}</script>
+<div style="float:right; padding-right:100px">
+                        <input alt="Busca" src="https://www.rumo.com.br/lojas/00021319/images/busca.jpg" type="image"></div>
+
+                        <form action="ListaProdutos.asp" method="GET" name="FormBuscaSimples" onsubmit="return VerTextoBS(this);">
+                            <input name="IDLoja" type="hidden" value="<IDLojaNum>">
+                            <input name="Y" type="hidden" value="<Y>">
+                            <input name="BuscaNomeRef" type="hidden" value="True">
+                            <input name="Digitada" type="hidden" value="True">
+                            <input class="InputTextBusca" id="autocomplete" maxlength="35" name="Texto" style="width: 300px; height: 40px; font-size:25px;" type="text" value="<SearchText>">
+                        </form>
+                        </div>
+                        </td>
+                        <td>
+                        <table border="0" cellpadding="0" cellspacing="0" height="125px" width="100%">
+                            <tbody>
+                                <tr>
+                                    <td><script>
+var IDLoja="<IDLojaNum>";
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","XMLCart.asp?IDLoja="+IDLoja+"",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML; 
+
+var x=xmlDoc.getElementsByTagName("item");
+var z=xmlDoc.getElementsByTagName("cart");
+
+try{currencyProdCart=(z[0].getElementsByTagName("currency")[0].childNodes[0].nodeValue);}
+catch(e){currencyProdCart=""}
+try{TotalQtyProdCart=(z[0].getElementsByTagName("TotalQty")[0].childNodes[0].nodeValue);}
+catch(e){TotalQtyProdCart="0"}
+try{subtotalProdCart=(z[0].getElementsByTagName("subtotal")[0].childNodes[0].nodeValue);}
+catch(e){subtotalProdCart="0"}
+
+var QtdCesta=TotalQtyProdCart;
+if (QtdCesta>0){
+document.write("<scr"+"ipt type='text/javascript' src='<BaseLoja>htm/MenuTopoAparecer.js'></scr"+"ipt>");
+document.write("<scr"+"ipt type='text/javascript' src='<BaseLoja>htm/MenuTopo.js'></scr"+"ipt>");
+document.write("      <style>");
+document.write("      .EstCestaTxt{font-size:8pt;font-family:tahoma,verdana}");
+document.write("      .EstTabTopoXML {padding:4px 2px 4px 4px;background:#f5f5f5;color:#333333;font-size:9pt;font-family:verdana;font-weight:bold;border-style:solid;border-width:1px;border-color:#cccccc}");
+document.write("      .EstPrecoProdCapaXML {color:#930000;font-size:8pt;font-family:arial;font-weight:bold}");
+document.write("      .EstTitCartXML a{font-size:18pt;color:blue;font-family:tahoma,verdana;font-weight:bold}");
+document.write("      .EstTitXML {font-size:8pt;color:#333333;font-family:tahoma,verdana;font-weight:bold}");
+document.write("      </style>");
+document.write("  <table width='100%' cellspacing='0' cellpadding='0' border='0'>");
+document.write("    <tr>");
+document.write("      <td>");
+document.write("        <ul id='TopoMenuTodos'>");
+document.write("          <li>");
+document.write("          <span style='display:block;padding:4px 2px 4px 2px;color:#666666;font-size:11px;font-family:verdana;font-weight:bold;'>Produtos no Carrinho: (<span class='EstPrecoProd'>"+ TotalQtyProdCart +"</span>) itens</span>");
+document.write("              <ul>");
+document.write("                <li>");
+document.write("                  <table width='310' border='0'>");
+document.write("                    <tr>");
+document.write("                      <td align='center'>");
+document.write("                        <table width='100%' border='0'>");
+document.write("                          <tr>");
+document.write("                            <td class='EstTitXML'>");
+document.write("                              <a href='AddProduto.asp?IDLoja=<IDLoja>' title='Ver meu carrinho'>Meu carrinho:</a>");
+document.write("                            </td>");
+document.write("                          </tr>");
+document.write("                          <tr>");
+document.write("                            <td class='EstCestaTxt' height='105' valign='top'>");
+document.write("                              <table width='300' border='0'>");
+
+for (i=0;i<x.length;i++)
+  { 
+var sCestaFC=document.getElementById("idMostraDadosCestaFC");
+var NomeProdCart=(x[i].getElementsByTagName("prod")[0].childNodes[0].nodeValue);
+var qtyProdCart=(x[i].getElementsByTagName("qty")[0].childNodes[0].nodeValue);
+var priceProdCart=(x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue);
+  document.write("<tr><td class='EstTitXML' width='300'>" + NomeProdCart + " (" + qtyProdCart + ")</td><td class='EstPrecoProdCapaXML' width='100'>" + currencyProdCart + " " + priceProdCart + "</td></tr>");
+  }
+
+document.write("                        <tr>");
+document.write("                      <td colspan='2'>");
+document.write("                            <br />");
+document.write("                      </td>");
+document.write("                    </tr>");
+document.write("                          </table>");
+document.write("                </td>");
+document.write("              </tr>");
+document.write("              <tr>");
+document.write("                <td>");
+document.write("                  <table width='300' border='0'>");
+document.write("                        <tr>");
+document.write("                      <td class='EstTabTopoXML' width='200'>");
+document.write("                            <b>Sub-total:</b>");
+document.write("                          </td>");
+document.write("                          <td class='EstTabTopoXML'>");
+document.write("                        "+ currencyProdCart +" " + subtotalProdCart);
+document.write("                          </td>");
+document.write("                    </tr>"); 
+document.write("                      </table>");
+document.write("                </td>");
+document.write("              </tr>");
+document.write("                </table>");
+document.write("                      </td>");
+document.write("                    </tr>");
+document.write("                  </table>");
+document.write("                </li>");
+document.write("              </ul>");
+document.write("          </li>");
+document.write("        </ul>");
+document.write("      </td>");
+document.write("    </tr>");
+document.write("  </table>");
+
+} else {
+document.write("<span style='display:block;padding:4px 2px 4px 2px;color:#666666;font-size:11px;font-family:verdana;font-weight:bold;'>Produtos no Carrinho: (<span class='EstPrecoProd'>"+ TotalQtyProdCart +"</span>) itens</span>");
+}
+</script>
+</td>
+                                </tr>
+                                <tr>
+                                    <td height="62px"><img src="<baseloja>images/subscribe_title.gif">
+                                    <fieldset>
+                                    <input name="key" type="hidden" value="dd99f9">
+                                    <input name="url_ok" type="hidden" value="https://www.thebakers.com.br">
+                                    <input name="url_error" type="hidden" value="https://www.thebakers.com.br">
+                                    <input name="list[]" type="hidden" value="524696">
+                                    <input border="0" name="IDLoja" type="hidden" value="21319">
+                                    <input class="InputTextnews1" id="Email" maxlength="50" name="email" onclick="if(this.value=='Digite aqui o seu email')this.value=''" size="28" style="width:190px !important" value="Digite aqui o seu email">
+                                    <input class="InputButtonnews" id="EnviarAssinante" name="EnviarAssinante" type="submit" value=" . "><span style="display:none">
+                                    <input checked="checked" id="FormatoHTMLTrue" name="FormatoHTML" type="radio" value="True">
+                                    <input id="FormatoHTMLNenhum" name="FormatoHTML" type="radio" value="Nenhum"></span> <script>
+  document.getElementById('mailee-form').onsubmit = function(){
+    re = /^[a-z0-9\._-]+@([a-z0-9][a-z0-9-_]*[a-z0-9-_]\.)+([a-z-_]+\.)?([a-z-_]+)$/
+    if(!this.email.value.match(re)) {
+      alert("Por favor, preencha corretamente o email");
+      this.email.focus();
+      return false;
+    }
+    return true;
+  }
+</script>
+</fieldset>
+
+                                    <form action="https://thebakers.mailee.me/go/add_contact_form" id="mailee-form" method="post">
+                                    </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="22px" width="245px"><img src="<baseloja>images/img_conectese.jpg">
+                                    <div class="fb-like" data-font="verdana" data-height="300" data-href="https://www.facebook.com/pages/The-Bakers/196567367039478" data-layout="button_count" data-send="false" data-show-faces="false" data-width="300" style="margin-left:0px; margin-top:4px"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><img height="1" src="images/shim.gif" width="1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" height="50px">
+                        <table border="0" cellpadding="0" cellspacing="0" height="50px" width="97%">
+                            <tbody>
+                                <tr>
+                                    <td colspan="14" height="30px"><ListPathCat out="2"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="14" style="margin-left:-20px; padding:0; padding-top:1px;"><img src="<baseloja>images/bg_menutopo.gif"></td>
+                                </tr>
+                                <tr>
+                                    <td><img height="10" src="images/shim.gif" width="46"></td>
+                                    <td width="88">
+                                    <a href="Custom.asp?IDLoja=<IDLoja>&amp;arq=a_the_bakers.html" title="A The Bakers"><img alt="The Bakers" src="<baseloja>images/menuhoriz_thebakres.gif"></a>
+                                    </td>
+                                    <td><img height="1" src="images/shim.gif" width="15"></td>
+                                    <td width="77">
+                                    <a href="Custom.asp?IDLoja=<IDLoja>&amp;arq=cardapio.html" title="Cardápio"><img alt="CARDÁPIOS" src="<baseloja>images/menuhoriz_cardapio.gif"></a>
+                                    </td>
+                                    <td><img height="1" src="images/shim.gif" width="15"></td>
+                                    <td width="54">
+                                    <a href="Custom.asp?IDLoja=<IDLoja>&amp;arq=lojas.html" title="Endereços"><img alt="LOJAS" src="<baseloja>images/menuhoriz_lojas.gif"></a>
+                                    </td>
+                                    <td><img height="1" src="images/shim.gif" width="15"></td>
+                                    <td width="74">
+                                    <a href="Cadastro.asp?IDLoja=<IDLoja>" title="Cadastro"><img alt="CADASTRO" src="<baseloja>images/menuhoriz_cadastro.gif"></a>
+                                    </td>
+                                    <td><img height="1" src="images/shim.gif" width="15"></td>
+                                    <td width="170">
+                                    <a href="https://thebakers.lojavirtualfc.com.br/sistema/Custom.asp?IDLoja=21319&amp;arq=catering/catering.html" title="Atendimento à empresas"><img alt="ATENDIMENTO ÀS EMPRESAS" src="<baseloja>images/menuhoriz_catering.gif"></a>
+                                    </td>
+                                    <td><img height="1" src="images/shim.gif" width="15"></td>
+                                    <td width="168">
+                                    <a href="https://www.thebakers.com.br/sistema/Custom.asp?IDLoja=21319&amp;arq=pu/cad_email.htm" title="Reservas Peixe Urbano "><img alt="Reservas Peixe Urbano" src="<baseloja>images/menuhoriz_respugroup.gif"></a>
+                                    </td>
+                                    <td><img height="1" src="images/shim.gif" width="15"></td>
+                                    <td>
+                                    <a href="FaleConosco.asp?IDLoja=<IDLoja>" title="Fale Conosco"><img alt="FALE CONOSCO" src="<baseloja>images/menuhoriz_fale.gif"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
