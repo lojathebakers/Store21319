@@ -1,0 +1,145 @@
+<style type="text/css">
+.EstTabPedido {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #666;
+}
+.EstTabPedido form tr .EstTabPedidoTit .EstTabPedido {
+	font-size: 18px;
+}
+.EstTabPedido form tr .EstTabPedidoTit .EstTabPedido {
+	font-size: 24px;
+}
+</style>
+<table align=center width=42% cellspacing=1 cellpadding=5 class=EstTabPedido>
+      <form name=form method=POST action=EnviaMail.asp>
+        <input type=hidden name=NomePara value='Nome para onde vai a msg'>
+        <input type=hidden name=EmailPara value='email@emaildestinatario.com.br'>
+        <input type=hidden name=Assunto value='Assunto da mensagem'>
+        <input type=hidden name=URLRetorno value='<HTMLoja>Obrigado.htm'>
+        <input type=hidden name=OrdemCampos value='NomeDe,EmailDe,Sexo,Cargo,Interesses,Comentarios'>
+  <tr>
+    <td colspan=2 align=center bgcolor="#FFFFFF" class=EstTabPedidoTit><p class="EstTabPedido">&nbsp;</p>
+      <p class="EstTabPedido">Solicite aqui um or&ccedil;amento para seu evento.<br />
+        Responderemos muito em breve.</p>
+      <p class="EstTabPedido">Se desejar, inicie um Chat no canto inferior/direito desta p&aacute;gina.</p>
+      <p class="EstTabPedido">&nbsp;</p></td>
+  </tr>   
+  <tr>
+    <td width=198 align=right bgcolor="#FFFFFF" class=EstNomeCampo><span class="EstTabPedido">Nome :</span></td>
+    <td width="736" bgcolor="#FFFFFF"><span class="EstTabPedido">
+      <input type=text name=nome class=InputText size=40 maxlength=40 id="nome">
+    </span></td>
+  </tr>   
+  <tr>
+    <td align=right bgcolor="#FFFFFF" class=EstNomeCampo><span class="EstTabPedido">E-mail :</span></td>
+    <td bgcolor="#FFFFFF"><span class="EstTabPedido">
+      <input type=text name=email class=InputText size=30 maxlength=50 id="email">
+      </span></td>
+  </tr>   
+  <tr>
+    <td align="right" bgcolor="#FFFFFF" class="EstNomeCampo"><span class="EstTabPedido">Telefone :</span></td>
+    <td bgcolor="#FFFFFF"><span class="EstTabPedido">
+      <input type="text" name="telefone" class="InputText" size="25" maxlength="50" id="telefone" />
+    </span></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="#FFFFFF" class="EstNomeCampo"><span class="EstTabPedido">Empresa :</span></td>
+    <td bgcolor="#FFFFFF"><span class="EstTabPedido">
+      <input type="text" name="empresa" class="InputText" size="25" maxlength="50" id="empresa" />
+    </span></td>
+  </tr>
+  <tr>
+    <td align=right valign=top bgcolor="#FFFFFF" class=EstNomeCampo><p class="EstTabPedido">Informa&ccedil;&otilde;es sobre o evento :</p></td>
+    <td bgcolor="#FFFFFF"><span class="EstTabPedido">
+      <textarea wrap=virtual cols=40 rows=10 name="informacoes" class=InputText style=height:50px;width:250px id="informacoes"></textarea>
+      </span></td>
+  </tr>   
+  <tr>
+    <td colspan=2 align=center bgcolor="#FFFFFF"><input type=button name=Enviar value=' Enviar ' class=InputButton onclick='javascript:ValidaForm()'></td>
+  </tr></form>
+</table>
+
+<script>
+function ValidaForm(){
+
+ //Contato Nome
+ if(isEmpty(document.form.NomeDe.value)){
+    AvisoErroCampo(document.form.NomeDe,'Informe seu nome.');
+    return false;
+ }
+
+ //E-mail
+ if(isEmpty(document.form.EmailDe.value) || !ValidaEmailInt(document.form.EmailDe.value)){
+    AvisoErroCampo(document.form.EmailDe,'Informe seu e-mail.');
+    return false;
+ }
+
+
+ // Verifica se foi escolhido Sexo
+ var checkedButton=false;
+ for (i=0;i<2;i++) if(document.form.Sexo[i].checked) checkedButton=true;
+ if (!checkedButton) {
+   alert("Escolha um dos sexos.");
+   document.form.Sexo[0].focus();
+   return false;
+ }
+
+
+ //Cargo
+ if(isEmpty(document.form.Cargo.options[document.form.Cargo.selectedIndex].value)){
+       AvisoErroCampo_SelectBox(document.form.Cargo,'Informe seu cargo.');
+    return false;
+ }
+
+ // Verifica se foi escolhido Interesses
+ var checkedButton=false;
+ for (i=0;i<5;i++) if(document.form.Interesses[i].checked) checkedButton=true;
+ if (!checkedButton) {
+   alert("Escolha pelo menos um dos Interesses.");
+   document.form.Interesses[0].focus();
+   return false;
+ }
+
+ //Comentários
+ if(isEmpty(document.form.Comentarios.value)){
+    AvisoErroCampo(document.form.Comentarios,'Comentário não pode ser branco.');
+    return false;
+ }
+
+ document.form.submit();
+}
+
+function ValidaEmailInt(sEmail) {
+  var regex=/^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+\.)+[a-zA-Z0-9.-]{2,4}$/;
+  return regex.test(sEmail);
+}
+
+function retiraEspaco(theString) {
+//retira espaços de string
+  if(theString.indexOf(" ")>=0){
+    var i=0;
+    while(theString.indexOf(" ")>=0){
+      if(theString.charAt(i)==" ")theString=theString.substring(0,i)+theString.substring(i+1,theString.length);
+      else i++;
+    }
+    newString=theString;
+  } 
+  else newString=theString;
+  return newString;
+}
+
+function isEmpty(s){return((retiraEspaco(s)==null)||(retiraEspaco(s).length==0));}
+
+function AvisoErroCampo(theField,warnText){
+  theField.focus();
+  theField.select();
+  alert(warnText);
+  return false;
+}
+
+function AvisoErroCampo_SelectBox(theField,s){
+  theField.focus();
+  alert(s);
+  return false;
+}
+</script>
