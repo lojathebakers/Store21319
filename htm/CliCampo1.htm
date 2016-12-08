@@ -1,0 +1,30 @@
+<!-- Radio button -->
+<input type=radio name=P2CliCampo1 value="Por um amigo">Por um amigo<br>
+<input type=radio name=P2CliCampo1 value="Google">Google<br>
+<input type=radio name=P2CliCampo1 value="Facebook">Facebook<br>
+<input type=radio name=P2CliCampo1 value="Email">Email<br>
+<input type=radio name=P2CliCampo1 value="Jornal ou Revista">Jornal ou Revista<br>
+<input type=radio name=P2CliCampo1 value="Outros meios">Outros meios<br>
+
+<script>
+
+setTimeout("validaCampo()",100)
+
+function validaCampo(){
+var iSelect=0,Achei=false;
+while(iSelect<document.Form1.P2CliCampo1.length && !Achei){
+  if(document.Form1.P2CliCampo1[iSelect].value=="<ValorCampo>"){document.Form1.P2CliCampo1[iSelect].checked=true;Achei=true;}
+  else iSelect++;
+}
+}
+
+function CliValidaCampo1(){
+  var iSelect=0,Achei=false;
+  while(iSelect<document.Form1.P2CliCampo1.length && !Achei){
+    if(document.Form1.P2CliCampo1[iSelect].checked)Achei=true;
+    else iSelect++;
+  }
+  if(!Achei){alert('Selecione por onde nos conheceu.');document.Form1.P2CliCampo1[0].focus();return false;}
+  else return true;
+}
+</script>
